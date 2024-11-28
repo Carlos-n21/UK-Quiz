@@ -74,10 +74,12 @@ body {
 
 /* Style for Home button */
 .container #home {
-    width: 25%;
+    width: 15%;
     padding: 5px 10px;
     font-size: 14px;
     display: inline-block;
+    background-color: white;
+    border: black 1px solid;
 }
 
 /* bottom margin manually changed botton property from Copilot code as not starting straight from bottom of the page */
