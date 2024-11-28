@@ -1,5 +1,5 @@
-import { quizQuestions } from 'questionbank.js';
-    
+import { quizQuestions } from './questionbank.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     // set qnum to access index in quizQuestions array
     let qnum = 0;
@@ -12,36 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // set feedbackElement to display feedback to user
     let feedbackElement = document.getElementById('feedback');
     
-//     const quizQuestions = [
-//     {
-//         question: "What is the UK currency?",
-//         options: {
-//             a: "Euro",
-//             b: "Dollar",
-//             c: "Pound",
-//             d: "Ruble"
-//         },
-//         correctAnswer: "c",
-//         category: "law", // add category to question: history, geography, law, culture
-//         imageURL: "assets/images/coins.webp",
-//         imageAlt: "Some coins and notes",
-//         incorrectFeedback: "The pound sterling, commonly known as the pound, is the official currency of the United Kingdom and is symbolised by £ with the currency code GBP."
-//     },
-//     {
-//         question: "Where in Scotland is known as the home of golf?",
-//         options: {
-//             a: "Glasgow",
-//             b: "Edinburgh",
-//             c: "St Andrew's",
-//             d: "Aberdeen"
-//         },
-//         correctAnswer: "c",
-//         imageURL: "assets/images/golf.webp",
-//         imageAlt: "A golf ball on a tee",
-//         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
-//     }
-
-// ];
 // event listener for nextQuestionButton
 document.getElementById('nextButton').addEventListener("click",nextQuestion);
 
@@ -113,8 +83,6 @@ function buildQuiz(){
     let optionButtons = document.querySelectorAll('.optionButton');
     for (let button of optionButtons) {
         button.addEventListener('click', submitAnswer); 
-            let selectedButton = button.getAttribute('data-value');
-            answer = selectedButton;
         }
     }
     

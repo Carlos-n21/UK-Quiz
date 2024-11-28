@@ -1,5 +1,5 @@
 // export quizQuestions array of objects
-const quizQuestions = [
+export const quizQuestions = [
     {
         question: "What is the UK currency?",
         options: {
