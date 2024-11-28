@@ -62,7 +62,7 @@ Also needs to get feedback about her choices for each question, if right/wrong, 
 Wishes to be able to test her knowledge in different areas/subjects of the Life in the UK.
 
 ## Project Plan
-
+[Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
 
 ### User Stories
 
