@@ -25,6 +25,19 @@ const quizQuestions = [
         imageURL: "assets/images/golf.webp",
         imageAlt: "A golf ball on a tee",
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
+    },
+    {
+        question: "Where in Scotland is known as the home of golf?",
+        options: {
+            a: "Glasgow",
+            b: "Edinburgh",
+            c: "St Andrew's",
+            d: "Aberdeen"
+        },
+        correctAnswer: "c",
+        imageURL: "assets/images/golf.webp",
+        imageAlt: "A golf ball on a tee",
+        incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     }
 
 ];
