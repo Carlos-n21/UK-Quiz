@@ -11,6 +11,7 @@ body {
     flex-direction: column;
 }
 
+/* container adapted manually to CSS provided by Copilot */
 .container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -35,10 +36,18 @@ body {
 }
 
 /* Style for categories buttons */
-.category-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+.category-buttons .btn {
+    flex: 1 1 calc(45% - 20px); /* Adjusted flex-basis to reduce button width */
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #b6e3fd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; /* Added margin to increase space between buttons */
 }
 
 .category-buttons a {
@@ -65,10 +74,12 @@ body {
 
 /* Style for Home button */
 .container #home {
-    width: 25%;
+    width: 15%;
     padding: 5px 10px;
     font-size: 14px;
     display: inline-block;
+    background-color: white;
+    border: black 1px solid;
 }
 
 /* bottom margin manually changed botton property from Copilot code as not starting straight from bottom of the page */
@@ -89,4 +100,12 @@ body {
 .footer img {
     width: 32px;
     height: 32px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .category-buttons .btn {
+        flex: 1 1 100%;
+        margin: 10px 0; /* Adjusted margin for mobile */
+    }
 }
