@@ -12,7 +12,7 @@
     <title>UK Quiz</title>
     <style>
 
-        /* CSS provided by Copilot  */        
+        /* CSS provided by Copilot and adapted   */        
         body {
             background-image: url('assets/images/london-eye-wide-2.jpg');
             background-size: cover;
@@ -22,6 +22,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         .container {
             background-color: rgba(255, 255, 255, 0.8);
@@ -31,6 +32,13 @@
         }
         .container h1 {
             margin-top: 0;
+            position: relative;
+            display: inline-block;
+            background-image: url('assets/images/uk-flag.png');
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            padding: 10px;
         }
         .container button {
             display: block;
@@ -60,7 +68,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Life in the UK</h1>
+        <h1>Life in the UK<br>Quiz Game</h1>
         <button>Play</button>
         <button>Rules</button>
     </div>
