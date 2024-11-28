@@ -87,8 +87,10 @@ function submitAnswer(e){
 // build the quiz page for a specific question in the quizQuestions array
 function buildQuiz(){
     // add question number (= qnum index+1) to Quiz page
-    let questionNumberSpan = document.getElementById('questionNum');
-    questionNumberSpan.innerText = parseInt(qnum+1);
+    let questionNumberSpan = document.querySelectorAll('questionNum');
+    for (let q of questionNumberSpan) {
+        q.innerText = parseInt(qnum+1);
+    }
     // add question text to Quiz page
     let questionTextElement = document.getElementById('questionText');
     questionTextElement.innerText = quizQuestions[qnum].question;
