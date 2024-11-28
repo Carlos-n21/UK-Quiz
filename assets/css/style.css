@@ -63,6 +63,7 @@ body {
     cursor: pointer;
 }
 
+/* Style for Home button */
 .container #home {
     width: 25%;
     padding: 5px 10px;
