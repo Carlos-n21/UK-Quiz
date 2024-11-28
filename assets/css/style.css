@@ -89,7 +89,16 @@ body {
     border: black 1px solid;
 }
 
-/* bottom margin property changed from Copilot code as not starting straight from bottom of the page */
+/* Style for feedback text */
+#feedback {
+    width: 300px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* bottom margin manually changed botton property from Copilot code 
+as not starting straight from bottom of the page */
 .footer {
     background-color: #BBE8F9;
     position: absolute;
