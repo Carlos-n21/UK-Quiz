@@ -151,12 +151,24 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
 
 ### Content References
+MS Copilot was used to generate some of the quiz questions and feedback content, which the team then reviewed and edited before including into the site.
+The UK Quiz logo was generated using Logo.ai, and edited and optimised using Squoosh.
+Copilot was used to help coding HTML, CSS style and JavaScript code as can be seen with the prompts below:
 
+- "Can you help me update the current code, so that the page shows this image: assets/images/london-eye-wide-2.jpg, on the background? Also can you help create a container on the middle of the page with a text box with the text "Life in the UK" close to the top of the container and two buttons "Play" after the text and "Rules" below the previous button?"
+
+- "Can you help change the image style of ".container h1" background to a fadding style that highlights the title?"
+
+- "can you help update the code so that the image is small and shows between the p element and the "Play Again" button?"
+
+- "Can you update the code to show categories buttons on top of each other on a mobile screen with space between them? And 2 on top and 2 above them with space between them? Categories buttons need to be light-blue with black text, all with same dimensions, please."
 
 ### Media References
-
+[Pexels.com](https://www.pexels.com/) for some of the images used in the quiz questions
+Background image TBC
 
 #### Acknowledgements
-
+Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
+Code Institute tutors (Dillon, Mark and Roo) for answering our questions
 
 [Back to top](#top)
