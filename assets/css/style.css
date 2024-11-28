@@ -34,15 +34,44 @@ body {
     background-position: center;
 }
 
-.container button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
+/* Style for categories buttons */
+.category-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-/* bottom margin manually changed from Copilot code as not starting straight from bottom of the page */
+.category-buttons a {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Style for Play and Rules buttons */
+.container .button {
+    display: block;
+    width: 100%;
+    margin: 10px -10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #b6e3fd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for Home button */
+.container #home {
+    width: 25%;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* bottom margin manually changed botton property from Copilot code as not starting straight from bottom of the page */
 .footer {
     background-color: #BBE8F9;
     position: absolute;
@@ -56,6 +85,7 @@ body {
     margin: 0 10px;
 }
 
+/* icons provided to Copilot when asked to help with coding */ 
 .footer img {
     width: 32px;
     height: 32px;
