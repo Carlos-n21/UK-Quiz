@@ -1,3 +1,62 @@
+/* CSS provided by Copilot and adapted   */        
 body {
-    background-color: aqua;
+    background-image: url('../images/london-eye-wide-2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* font added manually to CSS provided by Copilot */
+.container h1 {
+    margin-top: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.6)
+    ), url('../images/uk-flag.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* bottom margin manually changed from Copilot code as not starting straight from bottom of the page */
+.footer {
+    background-color: #BBE8F9;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.footer a {
+    margin: 0 10px;
+}
+
+.footer img {
+    width: 32px;
+    height: 32px;
 }
