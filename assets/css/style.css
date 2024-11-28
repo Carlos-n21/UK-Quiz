@@ -35,6 +35,12 @@ body {
     background-position: center;
 }
 
+.small-image {
+    width: 150px;
+    height: auto;
+    margin: 20px 0;
+}
+
 /* Style for categories buttons */
 .category-buttons .btn {
     flex: 1 1 calc(45% - 20px); /* Adjusted flex-basis to reduce button width */
