@@ -103,7 +103,7 @@ function buildQuiz(){
     let optionSetDiv = document.getElementById('optionSet');
     let optionSet = "";
     for (let option of optionsArray) {
-        optionSet += `<button type='button' class='optionButton' data-value='${option}'>${option}) ${options[option]}</button>`;
+        optionSet += `<a href='#' type='button' class='btn btn-light-blue btn-block optionButton' data-value='${option}'>${option}) ${options[option]}</a>`;
     }
     optionSetDiv.innerHTML = optionSet;
     // add event listener to option buttons
