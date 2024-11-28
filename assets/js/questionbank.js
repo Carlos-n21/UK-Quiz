@@ -22,8 +22,9 @@ const quizQuestions = [
             d: "Aberdeen"
         },
         correctAnswer: "c",
+        category: "culture",
         imageURL: "assets/images/golf.webp",
-        imageAlt: "A golf ball on a tee",
+        imageAlt: "A golf ball on a green",
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     },
     {
@@ -345,7 +346,7 @@ const quizQuestions = [
             d: "All Free Radio Channels"
         },
         correctAnswer: "c",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The money from TV licences is used to pay for the British Broadcasting Corporation also known as the BBC."
@@ -359,7 +360,7 @@ const quizQuestions = [
             d: "£4,000"
         },
         correctAnswer: "b",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The small claims procedure is used for claims of less than £10,000 in England and Wales."
@@ -373,7 +374,7 @@ const quizQuestions = [
             d: "11:00"
         },
         correctAnswer: "d",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "Public Houses, also known as Pubs, usually open at 11:00 AM, 12:00 PM on Sundays."
@@ -387,7 +388,7 @@ const quizQuestions = [
             d: "HMRC"
         },
         correctAnswer: "b",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "This system that deducts tax automatically is called ‘Pay As You Earn’, also known as PAYE."
@@ -401,7 +402,7 @@ const quizQuestions = [
             d: "Travelling in the UK"
         },
         correctAnswer: "b",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The Monarch has important ceremonial roles, such as the opening of the new parliamentary session each year."
@@ -415,7 +416,7 @@ const quizQuestions = [
             d: "£10,000"
         },
         correctAnswer: "d",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The small claims procedure is used for claims of less than £10,000 in England and Wales."
@@ -429,7 +430,7 @@ const quizQuestions = [
             d: "Every 5 years"
         },
         correctAnswer: "d",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "MPs are elected at a General Election, which is held at least every five years."
@@ -443,7 +444,7 @@ const quizQuestions = [
             d: "The Monarch"
         },
         correctAnswer: "c",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The monarch is the head of the Church of England. The spiritual leader of the Church of England is the Archbishop of Canterbury."
@@ -457,7 +458,7 @@ const quizQuestions = [
             d: "Crown Court"
         },
         correctAnswer: "c",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "More serious civil cases – for example, when a large amount of compensation is being claimed – are dealt with in the High Court in England, Wales and Northern Ireland."
@@ -471,7 +472,7 @@ const quizQuestions = [
             d: "PDSA"
         },
         correctAnswer: "b",
-        category: "society & law",
+        category: "law",
         imageURL: "",
         imageAlt: "",
         incorrectFeedback: "The National Society for the Prevention of Cruelty to Children (NSPCC) works with children."
