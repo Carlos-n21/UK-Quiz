@@ -14,25 +14,22 @@
      
 </head>
 <body>
+    <main>
     <div class="container">
         <h1>Life in the UK<br>Quiz Game</h1>
-        <p>Question</h2><span id="questionNum"></h2>
-        <p id="questionText">What is the UK currency?</p>
-        <img id=questionImage src="assets/images/quiz_image.png" alt="Quiz Image">
-        <div id="optionSet">
-        <button>a Euro</button>
-        <button>b Dollar</button>
-        <button>c Pound</button>
-        <button>D Rubio</button>
-    </div>
-      <p=feedback>The currency of UK is Pound</p>  
+        <h2>Question <span id="questionNum"></span></h2>
+        <p id="questionText"></p>
+        <img id=questionImage src="" alt="">
+        <div id="optionSet"></div>
+        <p id="feedback"></p>  
     </div>
     
     <div id="questionCounter">
-    <button id="prevButton">←</button>
-    　<p>Question 1/10</p>
-    <button id="prevButton">←</button>
-　　</div>
+    <button id="prevButton"><i class="fa-solid fa-square-caret-left"></i></button>
+    <p>Question 1/10</p>
+    <button id="nextButton"><i class="fa-solid fa-square-caret-right"></i></button>
+    </div>
+</main>
     <!-- Links to GitHub accounts changed manually and used copilot to write code -->
     <div class="footer">  
         <a href="https://github.com/tgrey2024" target="_blank">
@@ -46,7 +43,9 @@
         </a>
     </div>
 
-
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/28648f3889.js" crossorigin="anonymous"></script>
+    <!-- Link to Javascript -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
