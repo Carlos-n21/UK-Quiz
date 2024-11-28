@@ -1,3 +1,4 @@
+// export quizQuestions array of objects
 const quizQuestions = [
     {
         question: "What is the UK currency?",
@@ -54,7 +55,7 @@ const quizQuestions = [
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     },
     {
-        question: "What did the “Bill of Rights” confirm?",
+        question: "What did the 'Bill of Rights' confirm?",
         options: {
             a: "Kings can administer justice",
             b: "Parliament's increased power",
@@ -65,7 +66,7 @@ const quizQuestions = [
         category: "history",
         imageURL: "",
         imageAlt: "",
-        incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king’s power."
+        incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
     },
     {
         question: "How long did the Romans stay in Britain?",
@@ -280,7 +281,7 @@ const quizQuestions = [
         incorrectFeedback: "England and Wales and Scotland are in Great Britain."
     },
     {
-        question: "Which of the following is England’s largest national park?",
+        question: "Which of the following is England's largest national park?",
         options: {
             a: "The Lake District",
             b: "Snowdonia",
@@ -291,10 +292,10 @@ const quizQuestions = [
         category: "geography",
         imageURL: "",
         imageAlt: "",
-        incorrectFeedback: "The Lake District is England’s largest national park."
+        incorrectFeedback: "The Lake District is England's largest national park."
     },
     {
-        question: "Which of these are ‘Crown Dependencies’?",
+        question: "Which of these are 'Crown Dependencies'?",
         options: {
             a: "St Helena and Falkland Islands",
             b: "Ireland and the Channel Islands",
@@ -305,7 +306,7 @@ const quizQuestions = [
         category: "geography",
         imageURL: "",
         imageAlt: "",
-        incorrectFeedback: "The Channel Islands and the Isle of Man are closely related to the UK but are not part of it. They have their own governments and are called ‘Crown dependencies’."
+        incorrectFeedback: "The Channel Islands and the Isle of Man are closely related to the UK but are not part of it. They have their own governments and are called 'Crown dependencies'."
     },
     {
         question: "Where is Loch Lomond located?",
@@ -391,10 +392,10 @@ const quizQuestions = [
         category: "law",
         imageURL: "",
         imageAlt: "",
-        incorrectFeedback: "This system that deducts tax automatically is called ‘Pay As You Earn’, also known as PAYE."
+        incorrectFeedback: "This system that deducts tax automatically is called 'Pay As You Earn', also known as PAYE."
     },
     {
-        question: "What is the monarch’s ceremonial role?",
+        question: "What is the monarch's ceremonial role?",
         options: {
             a: "Creating parliamentary policies",
             b: "Opening a parliamentary session",
@@ -592,7 +593,7 @@ const quizQuestions = [
         incorrectFeedback: "Christopher Wren designed a new St Paul Cathedral after the previous one was destroyed by a great fire in 1666."
     },
     {
-        question: "What language did the Iron Age people speak?,
+        question: "What language did the Iron Age people speak?",
         options: {
             a: "Anglo-Saxon",
             b: "Viking",
@@ -610,13 +611,13 @@ const quizQuestions = [
         options: {
             a: "United we stand",
             b: "King/Queen reign over the UK",
-            c: "God Save the UK,
+            c: "God Save the UK",
             d: "God Save the King/Queen"
         },
         correctAnswer: "d",
         category: "culture",
         imageURL: "",
         imageAlt: "",
-        incorrectFeedback: "The National Anthem of the UK is ‘God Save the King/Queen’. It is played at important national occasions and at events attended by the King/Queen or the Royal Family. The first verse is: ‘God save our gracious King! Long live our noble King! God save the King! Send him victorious, Happy and glorious, Long to reign over us, God save the King!’."
+        incorrectFeedback: "The National Anthem of the UK is 'God Save the King/Queen'. It is played at important national occasions and at events attended by the King/Queen or the Royal Family. The first verse is: ‘God save our gracious King! Long live our noble King! God save the King! Send him victorious, Happy and glorious, Long to reign over us, God save the King!'."
     },
 ];
