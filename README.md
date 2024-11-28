@@ -90,7 +90,11 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 
 
 ## Website Features
-
+- Homepage
+- Rules - modal
+- Categories
+- Quiz page
+- Results
 
 [Back to top](#top)
 
