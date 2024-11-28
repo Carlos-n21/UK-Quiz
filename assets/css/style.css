@@ -11,7 +11,6 @@ body {
     flex-direction: column;
 }
 
-/* container adapted manually to CSS provided by Copilot */
 .container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -35,6 +34,7 @@ body {
     background-position: center;
 }
 
+/* Style for results image */
 .small-image {
     width: 150px;
     height: auto;
@@ -88,7 +88,7 @@ body {
     border: black 1px solid;
 }
 
-/* bottom margin manually changed botton property from Copilot code as not starting straight from bottom of the page */
+/* bottom margin property changed from Copilot code as not starting straight from bottom of the page */
 .footer {
     background-color: #BBE8F9;
     position: absolute;
