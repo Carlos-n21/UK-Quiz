@@ -63,6 +63,13 @@ body {
     cursor: pointer;
 }
 
+.container #home {
+    width: 25%;
+    padding: 5px 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
 /* bottom margin manually changed botton property from Copilot code as not starting straight from bottom of the page */
 .footer {
     background-color: #BBE8F9;
