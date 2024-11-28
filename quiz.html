@@ -8,6 +8,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        
     <!-- CSS link -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>UK Quiz</title>
@@ -17,18 +20,17 @@
     <main>
     <div class="container">
         <h1>Life in the UK<br>Quiz Game</h1>
-        <h2>Question <span id="questionNum"></span></h2>
+        <h3>Question <span id="questionNum"></span></h3>
         <p id="questionText"></p>
         <img id=questionImage src="" alt="">
-        <div id="optionSet"></div>
-        <p id="feedback"></p>  
-    </div>
-    
-    <div id="questionCounter">
-    <button id="prevButton"><i class="fa-solid fa-square-caret-left"></i></button>
-    <p>Question 1/10</p>
-    <button id="nextButton"><i class="fa-solid fa-square-caret-right"></i></button>
-    </div>
+        <div id="optionSet" my-3></div>
+        <div id="feedback"></div>      
+        <div id="questionCounter">
+        <a href="#" id="prevButton"><i class="fa-solid fa-square-caret-left"></i></a>
+        <span>Question <span id="questionNum"></span>/10</span>
+        <a href="#" id="nextButton"><i class="fa-solid fa-square-caret-right"></i></a>
+        </div>
+</div>
 </main>
     <!-- Links to GitHub accounts changed manually and used copilot to write code -->
     <div class="footer">  
