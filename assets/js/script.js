@@ -19,13 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
 // event listener for nextQuestionButton
 document.getElementById('nextButton').addEventListener("click",nextQuestion);
 
+// show next button
+function showNextButton(){
+    let nextButton = document.getElementById('nextButton');
+    nextButton.style.display = "inline";
+}
+
 // displays the next question
 function nextQuestion(){
     if (totalAnswered < quizLength-1) {
         qnum++;
         buildQuiz();
         feedbackElement.innerText = "";
-        ++totalAnswered;
     } else {
         showResults();
     }
@@ -48,6 +53,12 @@ function clearAnswer(){
     feedbackElement.innerText = "";
 }
 
+// calculate score
+function calculateScore(){
+    score = ((correctNum / totalAnswered) * 100);
+    console.log("Score: "+score);
+}
+
 // submit answer
 function submitAnswer(e){
     // clear previous feedback
@@ -61,8 +72,7 @@ function submitAnswer(e){
             answerElement.classList.add('btn-success');
             answerElement.classList.remove('btn-light-blue');
             correctNum++;
-            score = Math.round((correctNum / totalAnswered) * 100);
-            console.log(score);
+            console.log("correct:"+correctNum+" totalAnswered:"+totalAnswered);
             // display feedback for correct answer
             feedbackElement.innerText = "Correct! Well done!";
         } else {
@@ -70,6 +80,7 @@ function submitAnswer(e){
             answerElement.classList.add('btn-danger');
             answerElement.classList.remove('btn-light-blue');
             incorrectNum++;
+            console.log("correct:"+correctNum+" totalAnswered:"+totalAnswered);
             // display feedback for incorrect answer
             feedbackElement.innerText = quizQuestions[qnum].incorrectFeedback;
 
@@ -78,12 +89,16 @@ function submitAnswer(e){
         // handle case where no answer is selected
         feedbackElement.innerText = "Please select an answer";
     }
+    // increment totalAnswered
+    totalAnswered++;
     
 }
 
 // builds the results page
 function showResults(){
     let resultsElement = document.getElementById('questionArea');
+    // calculate score
+    calculateScore();
     // set comments and gifs for different score ranges
     const comments = [
         "<strong>You are a True Brit at Heart!</strong> Fantastic job passing your Life in the UK test! Your understanding of British life and culture is impressive. Welcome to your new home!",
@@ -135,11 +150,10 @@ function showResults(){
                 <h5 class="results-text">"${comment}</h5>
             </div>
             <div class="col-12 col-md-6">
-                <div style="width:100%;height:0;padding-bottom:56%;">
-            <iframe src="${animgifURL}" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
-            </iframe>
+            <div style="width:100%;height:0;padding-bottom:56%;">
+            <iframe src="${animgifURL}" width="90%" height="90%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <p><a href="${gifURL} alt="${gifAlt} target="_blank">via GIPHY</a></p>
             </div>
-            <p><a href="${gifURL} alt="${gifAlt}">via GIPHY</a></p>
             </div>
         </div>
         
@@ -186,6 +200,7 @@ function buildQuiz(){
     let optionButtons = document.querySelectorAll('.optionButton');
     for (let button of optionButtons) {
         button.addEventListener('click', submitAnswer); 
+        button.addEventListener('click', showNextButton);
         }
     }
     
