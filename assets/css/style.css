@@ -122,8 +122,4 @@ as not starting straight from bottom of the page */
         flex: 1 1 100%;
         margin: 10px 0; /* Adjusted margin for mobile */
     }
-
-    .container {
-        padding: 25px;
-    }
 }
