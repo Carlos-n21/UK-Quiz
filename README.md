@@ -115,12 +115,22 @@ Progress Indicator
 
 ## Technologies Used
 ### Languages and Technologies
-
+![Static Badge](https://img.shields.io/badge/HTML5-Language-blue)
+![Static Badge](https://img.shields.io/badge/CSS3-Language-blue)
+![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
+![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
 
 ### Libraries
+![Static Badge](https://img.shields.io/badge/Bootstrap-5.3-purple)
+![Static Badge](https://img.shields.io/badge/FontAwesome-icons-navy)
+![Static Badge](https://img.shields.io/badge/GoogleFonts-Typography-blue)
 
 ### Tools and Programs
-
+![Static Badge](https://img.shields.io/badge/LogoAI-LogoGenerator-red)
+![Static Badge](https://img.shields.io/badge/Favicon.io-icons-navy)
+![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-green)
+![Static Badge](https://img.shields.io/badge/MSCopilot-AI-orange)
+![Static Badge](https://img.shields.io/badge/GitHubCopilot-AI-orange)
 
 [Back to top](#top)
 
@@ -140,13 +150,17 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
+
 #### HTML Validation
+- Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
 #### CSS Validation
+- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 
 #### Lighthouse Audit
 
 ### Bugs yet to be Fixed
+- 
 
 [Back to top](#top)
 
