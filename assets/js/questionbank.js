@@ -1,4 +1,5 @@
-const quizQuestions = [
+// export quizQuestions array of objects
+export const quizQuestions = [
     {
         question: "What is the UK currency?",
         options: {
@@ -28,33 +29,7 @@ const quizQuestions = [
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     },
     {
-        question: "Where in Scotland is known as the home of golf?",
-        options: {
-            a: "Glasgow",
-            b: "Edinburgh",
-            c: "St Andrew's",
-            d: "Aberdeen"
-        },
-        correctAnswer: "c",
-        imageURL: "assets/images/golf.webp",
-        imageAlt: "A golf ball on a tee",
-        incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
-    },
-    {
-        question: "Where in Scotland is known as the home of golf?",
-        options: {
-            a: "Glasgow",
-            b: "Edinburgh",
-            c: "St Andrew's",
-            d: "Aberdeen"
-        },
-        correctAnswer: "c",
-        imageURL: "assets/images/golf.webp",
-        imageAlt: "A golf ball on a tee",
-        incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
-    },
-    {
-        question: "What did the “Bill of Rights” confirm?",
+        question: "What did the 'Bill of Rights' confirm?",
         options: {
             a: "Kings can administer justice",
             b: "Parliament's increased power",
@@ -63,6 +38,9 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
+        imageURL: "./assets/images/parliament.webp",
+        imageAlt: "Westminster Palace",
+        incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
         imageURL: "assets/images/questionbank/history1_billOfRight.png",
         imageAlt: "Bill of rights",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king’s power."
@@ -77,8 +55,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "history",
-        imageURL: "assets/images/romanbath.webp",
-        imageAlt: "roman bath",
+        imageURL: "",
+        imageAlt: "",
         incorrectFeedback: "The Romans remained in Britain for 400 years."
     },
     {
@@ -280,7 +258,7 @@ const quizQuestions = [
         incorrectFeedback: "England and Wales and Scotland are in Great Britain."
     },
     {
-        question: "Which of the following is England’s largest national park?",
+        question: "Which of the following is England's largest national park?",
         options: {
             a: "The Lake District",
             b: "Snowdonia",
@@ -289,12 +267,12 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "assets/images/questionbank/geography7_nationalPark.png",
-        imageAlt: "national park",
+        imageURL: "",
+        imageAlt: "",
         incorrectFeedback: "The Lake District is England’s largest national park."
     },
     {
-        question: "Which of these are ‘Crown Dependencies’?",
+        question: "Which of these are 'Crown Dependencies'?",
         options: {
             a: "St Helena and Falkland Islands",
             b: "Ireland and the Channel Islands",
@@ -303,8 +281,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "geography",
-        imageURL: "assets/images/questionbank/geography8_crownDependencies.jpg",
-        imageAlt: "crown dependencies",
+        imageURL: "",
+        imageAlt: "",
         incorrectFeedback: "The Channel Islands and the Isle of Man are closely related to the UK but are not part of it. They have their own governments and are called ‘Crown dependencies’."
     },
     {
@@ -389,12 +367,12 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "assets/images/questionbank/l&s4_tax.jpg",
-        imageAlt: "tax",
+        imageURL: "",
+        imageAlt: "",
         incorrectFeedback: "This system that deducts tax automatically is called ‘Pay As You Earn’, also known as PAYE."
     },
     {
-        question: "What is the monarch’s ceremonial role?",
+        question: "What is the monarch's ceremonial role?",
         options: {
             a: "Creating parliamentary policies",
             b: "Opening a parliamentary session",
@@ -592,7 +570,7 @@ const quizQuestions = [
         incorrectFeedback: "Christopher Wren designed a new St Paul Cathedral after the previous one was destroyed by a great fire in 1666."
     },
     {
-        question: "What language did the Iron Age people speak?,
+        question: "What language did the Iron Age people speak?",
         options: {
             a: "Anglo-Saxon",
             b: "Viking",
@@ -610,13 +588,13 @@ const quizQuestions = [
         options: {
             a: "United we stand",
             b: "King/Queen reign over the UK",
-            c: "God Save the UK,
+            c: "God Save the UK",
             d: "God Save the King/Queen"
         },
         correctAnswer: "d",
         category: "culture",
-        imageURL: "assets/images/questionbank/culture10_anthem.jpg",
-        imageAlt: "anthem",
+        imageURL: "",
+        imageAlt: "",
         incorrectFeedback: "The National Anthem of the UK is ‘God Save the King/Queen’. It is played at important national occasions and at events attended by the King/Queen or the Royal Family. The first verse is: ‘God save our gracious King! Long live our noble King! God save the King! Send him victorious, Happy and glorious, Long to reign over us, God save the King!’."
     },
 ];
