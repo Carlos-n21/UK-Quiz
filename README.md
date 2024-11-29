@@ -1,9 +1,10 @@
 # JavaScript Group Hackathon Project <a id="top"/>
-![Logo](https://github.com/user-attachments/assets/9da40521-5c9e-4e6e-ab88-3f1613b2d7bb)
+![logo_transparentBG](https://github.com/user-attachments/assets/c3c43822-a751-47e5-be09-e2efc07dbe62)
+
 
 ## Introduction
 
-Live site: [(https://carlos-n21.github.io/UK-Quiz/)]
+Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/UK-Quiz/)
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
@@ -85,12 +86,17 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 
 ## Design
 ### Colour Scheme
+- Color palette used<br>
+  <img src="assets/images/color-palette.png">
 
+- Contrast check for correct and incorrect answer on quiz<br>
+  <img src="assets/images/color-contrast-wrong-answer.png"> <img src="assets/images/green-color-contrast-rightanswer.png">
 
 ### Typography
 
 ### Imagery
-
+- Background image<br>
+  <img src="assets/images/london-eye-wide-2.jpg">
 
 ## Website Features
 - Homepage
@@ -114,12 +120,22 @@ Progress Indicator
 
 ## Technologies Used
 ### Languages and Technologies
-
+![Static Badge](https://img.shields.io/badge/HTML5-Language-blue)
+![Static Badge](https://img.shields.io/badge/CSS3-Language-blue)
+![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
+![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
 
 ### Libraries
+![Static Badge](https://img.shields.io/badge/Bootstrap-5.3-purple)
+![Static Badge](https://img.shields.io/badge/FontAwesome-icons-navy)
+![Static Badge](https://img.shields.io/badge/GoogleFonts-Typography-blue)
 
 ### Tools and Programs
-
+![Static Badge](https://img.shields.io/badge/LogoAI-LogoGenerator-red)
+![Static Badge](https://img.shields.io/badge/Favicon.io-icons-navy)
+![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-green)
+![Static Badge](https://img.shields.io/badge/MSCopilot-AI-orange)
+![Static Badge](https://img.shields.io/badge/GitHubCopilot-AI-orange)
 
 [Back to top](#top)
 
@@ -139,13 +155,17 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
+
 #### HTML Validation
+- Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
 #### CSS Validation
+- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 
 #### Lighthouse Audit
 
 ### Bugs yet to be Fixed
+- 
 
 [Back to top](#top)
 
