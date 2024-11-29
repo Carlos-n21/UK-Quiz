@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // set feedbackElement to display feedback to user
     let feedbackElement = document.getElementById('feedback');
     // set quizLength to number of questions per round
-    let quizLength = 10;
+    let quizLength = 40;
     // set totalAnswered to number of questions answered
     let totalAnswered = 0;
     
@@ -56,7 +56,6 @@ function clearAnswer(){
 // calculate score
 function calculateScore(){
     score = Math.round((correctNum / totalAnswered) * 100);
-    console.log("Score: "+score);
 }
 
 // submit answer
@@ -196,6 +195,10 @@ function buildQuiz(){
         optionSet += `<a href='#' type='button' class='btn btn-light-blue btn-block optionButton' data-value='${option}'>${option}) ${options[option]}</a>`;
     }
     optionSetDiv.innerHTML = optionSet;
+    // add number of questions to Quiz page
+    let quizLengthElement = document.getElementById('quizLength');
+    quizLengthElement.innerText = quizLength;
+    
     // add event listener to option buttons
     let optionButtons = document.querySelectorAll('.optionButton');
     for (let button of optionButtons) {
