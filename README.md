@@ -86,12 +86,17 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 
 ## Design
 ### Colour Scheme
+- Color palette used<br>
+  <img src="assets/images/color-palette.png">
 
+- Contrast check for correct and incorrect answer on quiz<br>
+  <img src="assets/images/color-contrast-wrong-answer.png"> <img src="assets/images/green-color-contrast-rightanswer.png">
 
 ### Typography
 
 ### Imagery
-
+- Background image<br>
+  <img src="assets/images/london-eye-wide-2.jpg">
 
 ## Website Features
 - Homepage
