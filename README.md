@@ -1,9 +1,10 @@
 # JavaScript Group Hackathon Project <a id="top"/>
-![Logo](https://github.com/user-attachments/assets/9da40521-5c9e-4e6e-ab88-3f1613b2d7bb)
+![logo_transparentBG](https://github.com/user-attachments/assets/c3c43822-a751-47e5-be09-e2efc07dbe62)
+
 
 ## Introduction
 
-Live site: [(https://carlos-n21.github.io/UK-Quiz/)]
+Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/UK-Quiz/)
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
