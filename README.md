@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Live site: [Enter Link Here]
+Live site: [(https://carlos-n21.github.io/UK-Quiz/)]
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
@@ -28,6 +28,8 @@ Live site: [Enter Link Here]
 [Back to top](#top)
 
 ## User Experience Design
+
+<img src="assets/images/UK-Quizz-responsive-image.png" alt="Website view on devices with different sizes">
 
 ### Project Brief
 The project goal is to provide a tool for users that wish to be UK citizens, which involves taking a quiz about Life in the UK as part of their assessment to get citizenship.
