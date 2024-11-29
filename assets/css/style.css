@@ -18,6 +18,12 @@ body {
     text-align: center;
 }
 
+/* custom style for index.html container */
+.custom-container {
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
 #img-logo {
     width: 200px;
     height: auto;
