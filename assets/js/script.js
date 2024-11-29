@@ -195,6 +195,10 @@ function buildQuiz(){
         optionSet += `<a href='#' type='button' class='btn btn-light-blue btn-block optionButton' data-value='${option}'>${option}) ${options[option]}</a>`;
     }
     optionSetDiv.innerHTML = optionSet;
+    // add number of questions to Quiz page
+    let quizLengthElement = document.getElementById('quizLength');
+    quizLengthElement.innerText = quizLength;
+    
     // add event listener to option buttons
     let optionButtons = document.querySelectorAll('.optionButton');
     for (let button of optionButtons) {
