@@ -28,20 +28,20 @@ export const quizQuestions = [
         imageAlt: "A golf ball on a green",
         incorrectFeedback: "St Andrew's in Scotland is known as the home of golf."
     },
-    {
-        question: "What did the 'Bill of Rights' confirm?",
-        options: {
-            a: "Kings can administer justice",
-            b: "Parliament's increased power",
-            c: "King's increased power",
-            d: "Kings can collect taxes"
-        },
-        correctAnswer: "b",
-        category: "history",
-        imageURL: "./assets/images/parliament.webp",
-        imageAlt: "Westminster Palace",
-        incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
-    },
+    // {
+    //     question: "What did the 'Bill of Rights' confirm?",
+    //     options: {
+    //         a: "Kings can administer justice",
+    //         b: "Parliament's increased power",
+    //         c: "King's increased power",
+    //         d: "Kings can collect taxes"
+    //     },
+    //     correctAnswer: "b",
+    //     category: "history",
+    //     imageURL: "./assets/images/parliament.webp",
+    //     imageAlt: "Westminster Palace",
+    //     incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
+    // },
     {
         question: "How long did the Romans stay in Britain?",
         options: {
