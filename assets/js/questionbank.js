@@ -15,20 +15,6 @@ export const quizQuestions = [
         incorrectFeedback: "The pound sterling, commonly known as the pound, is the official currency of the United Kingdom and is symbolised by £ with the currency code GBP."
     },
     {
-        question: "Where in Scotland is known as the home of golf?",
-        options: {
-            a: "Glasgow",
-            b: "Edinburgh",
-            c: "St Andrew's",
-            d: "Aberdeen"
-        },
-        correctAnswer: "c",
-        category: "culture",
-        imageURL: "assets/images/questionbank/golf.webp",
-        imageAlt: "A golf ball on a green",
-        incorrectFeedback: "St Andrew's in Scotland is known as the home of golf."
-    },
-    {
         question: "What did the 'Bill of Rights' confirm?",
         options: {
             a: "Kings can administer justice",
@@ -168,8 +154,6 @@ export const quizQuestions = [
         imageAlt: "First farmers building",
         incorrectFeedback: "The first farmers built houses, tombs and monuments on the land."
     },
-
-
     {
         question: "Where in Scotland is known as the home of golf?",
         options: {
