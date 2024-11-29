@@ -99,7 +99,7 @@ body {
 as not starting straight from bottom of the page */
 .footer {
     background-color: #BBE8F9;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-align: center;
     width: 100%;
