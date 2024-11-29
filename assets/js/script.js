@@ -55,7 +55,7 @@ function clearAnswer(){
 
 // calculate score
 function calculateScore(){
-    score = ((correctNum / totalAnswered) * 100);
+    score = Math.round((correctNum / totalAnswered) * 100);
     console.log("Score: "+score);
 }
 
