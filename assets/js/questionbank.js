@@ -63,8 +63,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history1_billOfRight.png",
+        imageAlt: "Bill of rights",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king’s power."
     },
     {
@@ -77,8 +77,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/romanbath.webp",
+        imageAlt: "roman bath",
         incorrectFeedback: "The Romans remained in Britain for 400 years."
     },
     {
@@ -91,8 +91,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history3_ww2.jpg",
+        imageAlt: "ww2",
         incorrectFeedback: "Hitler invaded Poland and took control of Belgium and the Netherlands. At this time of national crisis, Winston Churchill became Prime Minister."
     },
     {
@@ -105,8 +105,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history4_ bronzAge.png",
+        imageAlt: "bronze age",
         incorrectFeedback: "People lived in roundhouses and buried their dead in tombs called round barrows."
     },
     {
@@ -119,8 +119,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history5_ww1.jpg",
+        imageAlt: "ww1",
         incorrectFeedback: "The first World War began in 1914 and ended in 1918."
     },
     {
@@ -133,8 +133,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history6_black.deth.png",
+        imageAlt: "black death",
         incorrectFeedback: "One third of the population of England and a similar proportion in Scotland and Wales died because of the Black Death."
     },
     {
@@ -147,8 +147,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history7_royal.png",
+        imageAlt: "royal",
         incorrectFeedback: "Queen Elizabeth I became one of the most popular monarchs in English history, particularly after 1588, when the English defeated the Spanish Armada."
     },
     {
@@ -161,8 +161,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history8_Ireland.jpg",
+        imageAlt: "Ireland",
         incorrectFeedback: "Ireland became two countries in 1922."
     },
     {
@@ -175,8 +175,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/history9_waterloo.jpg",
+        imageAlt: "waterloo",
         incorrectFeedback: "In 1815, the French Wars ended with the defeat of the Emperor Napoleon by the Duke of Wellington at the Battle of Waterloo."
     },
     {
@@ -189,7 +189,7 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "",
+        imageURL: "assets/images/questionbank/history10_farmer.jpg",
         imageAlt: "",
         incorrectFeedback: "The first farmers built houses, tombs and monuments on the land."
     },
@@ -205,8 +205,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/golf.webp",
+        imageAlt: "golf",
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     },
     {
@@ -219,8 +219,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography2_fringe.jpg",
+        imageAlt: "fringe",
         incorrectFeedback: "The Edinburgh Festival takes place in Edinburgh, Scotland, every summer. The most well-known is the Edinburgh Festival Fringe, also known as the Fringe."
     },
     {
@@ -233,8 +233,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography3_uk in 1901.jpg",
+        imageAlt: "1901",
         incorrectFeedback: "The population of the UK was 40 million in 1901."
     },
     {
@@ -247,8 +247,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography4_Wales.jpg",
+        imageAlt: "walse",
         incorrectFeedback: "Bodnant Garden is in Wales."
     },
     {
@@ -261,8 +261,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography5_scotland.jpg",
+        imageAlt: "scotland",
         incorrectFeedback: "The SECC is in Glasgow, Scotland."
     },
     {
@@ -275,8 +275,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography6_greatBriten.jpg",
+        imageAlt: "great Britain",
         incorrectFeedback: "England and Wales and Scotland are in Great Britain."
     },
     {
@@ -289,8 +289,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography7_nationalPark.png",
+        imageAlt: "national park",
         incorrectFeedback: "The Lake District is England’s largest national park."
     },
     {
@@ -303,8 +303,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography8_crownDependencies.jpg",
+        imageAlt: "crown dependencies",
         incorrectFeedback: "The Channel Islands and the Isle of Man are closely related to the UK but are not part of it. They have their own governments and are called ‘Crown dependencies’."
     },
     {
@@ -317,8 +317,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography9_lochLomond.jpg",
+        imageAlt: "lock lomond",
         incorrectFeedback: "Loch Lomond is the largest expanse of fresh water in mainland Britain and probably the best-known part of the park. It is located in Scotland."
     },
     {
@@ -331,8 +331,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "geography",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/geography10_swansea.jpg",
+        imageAlt: "swansea",
         incorrectFeedback: "Swansea is located in Wales."
     },
     
@@ -347,8 +347,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s1_tvLicence.jpg",
+        imageAlt: "tv licence",
         incorrectFeedback: "The money from TV licences is used to pay for the British Broadcasting Corporation also known as the BBC."
     },
     {
@@ -361,8 +361,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s2_claims.jpg",
+        imageAlt: "claims",
         incorrectFeedback: "The small claims procedure is used for claims of less than £10,000 in England and Wales."
     },
     {
@@ -375,8 +375,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s3_pub.png",
+        imageAlt: "pub",
         incorrectFeedback: "Public Houses, also known as Pubs, usually open at 11:00 AM, 12:00 PM on Sundays."
     },
     {
@@ -389,8 +389,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s4_tax.jpg",
+        imageAlt: "tax",
         incorrectFeedback: "This system that deducts tax automatically is called ‘Pay As You Earn’, also known as PAYE."
     },
     {
@@ -403,22 +403,22 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s5_mornach.png",
+        imageAlt: "mornach",
         incorrectFeedback: "The Monarch has important ceremonial roles, such as the opening of the new parliamentary session each year."
     },
     {
-        question: "What is the money limit for the small claims procedure in England and Wales?",
+        question: "Which country’s flag is not part of the Union Flag?",
         options: {
-            a: "£4,000",
-            b: "£6,000",
-            c: "£5,000",
-            d: "£10,000"
+            a: "Scotland",
+            b: "England",
+            c: "Ireland",
+            d: "Wales"
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s6_unionJack.jpg",
+        imageAlt: "union jack",
         incorrectFeedback: "The small claims procedure is used for claims of less than £10,000 in England and Wales."
     },
     {
@@ -431,8 +431,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s7_election.png",
+        imageAlt: "election",
         incorrectFeedback: "MPs are elected at a General Election, which is held at least every five years."
     },
     {
@@ -445,8 +445,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s8_charch.jpg",
+        imageAlt: "charch",
         incorrectFeedback: "The monarch is the head of the Church of England. The spiritual leader of the Church of England is the Archbishop of Canterbury."
     },
     {
@@ -459,8 +459,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s2_claims.jpg",
+        imageAlt: "claims",
         incorrectFeedback: "More serious civil cases – for example, when a large amount of compensation is being claimed – are dealt with in the High Court in England, Wales and Northern Ireland."
     },
     {
@@ -473,8 +473,8 @@ const quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/l&s10_children.png",
+        imageAlt: "children",
         incorrectFeedback: "The National Society for the Prevention of Cruelty to Children (NSPCC) works with children."
     },
 
@@ -489,8 +489,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture1_henryPurcell.jpg",
+        imageAlt: "Henry Purcell",
         incorrectFeedback: "Henry Purcell (1659–95) was the organist at Westminster Abbey. He wrote church music and operas."
     },
     {
@@ -503,8 +503,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture2_lent.jpg",
+        imageAlt: "lent",
         incorrectFeedback: "The 40 days before Easter are known as Lent."
     },
     {
@@ -517,8 +517,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture3_residence.jpg",
+        imageAlt: "residence",
         incorrectFeedback: "The official home of the Prime Minister is 10 Downing Street, in central London, near the Houses of Parliament."
     },
     {
@@ -531,8 +531,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture4_australia.jpg",
+        imageAlt: "australia",
         incorrectFeedback: "Captain James Cook mapped the coast of Australia."
     },
     {
@@ -545,8 +545,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture5_www.png",
+        imageAlt: "www",
         incorrectFeedback: "World Wide Web was invented by Sir Tim Berners-Lee (1955–) who is British. Information was successfully transferred via the web for the first time on 25 December 1990."
     },
     {
@@ -559,8 +559,8 @@ const quizQuestions = [
         },
         correctAnswer: "a",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture6_nightingale.jpg",
+        imageAlt: "naightingale",
         incorrectFeedback: "Florence Nightingale was born in Italy to English parents in 1820."
     },
     {
@@ -573,8 +573,8 @@ const quizQuestions = [
         },
         correctAnswer: "",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture7_olympic.png",
+        imageAlt: "olympic",
         incorrectFeedback: "Dame Kelly Holmes (1970–) won two gold medals for running in the 2004 Olympic Games."
     },
     {
@@ -587,8 +587,8 @@ const quizQuestions = [
         },
         correctAnswer: "c",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture8_stPaul.jpg",
+        imageAlt: "at Paul",
         incorrectFeedback: "Christopher Wren designed a new St Paul Cathedral after the previous one was destroyed by a great fire in 1666."
     },
     {
@@ -601,8 +601,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture9_ironage.png",
+        imageAlt: "iron age",
         incorrectFeedback: "Their language was part of the Celtic language family."
     },
     {
@@ -615,8 +615,8 @@ const quizQuestions = [
         },
         correctAnswer: "d",
         category: "culture",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "assets/images/questionbank/culture10_anthem.jpg",
+        imageAlt: "anthem",
         incorrectFeedback: "The National Anthem of the UK is ‘God Save the King/Queen’. It is played at important national occasions and at events attended by the King/Queen or the Royal Family. The first verse is: ‘God save our gracious King! Long live our noble King! God save the King! Send him victorious, Happy and glorious, Long to reign over us, God save the King!’."
     },
 ];
