@@ -29,32 +29,6 @@ export const quizQuestions = [
         incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
     },
     {
-        question: "Where in Scotland is known as the home of golf?",
-        options: {
-            a: "Glasgow",
-            b: "Edinburgh",
-            c: "St Andrew's",
-            d: "Aberdeen"
-        },
-        correctAnswer: "c",
-        imageURL: "assets/images/golf.webp",
-        imageAlt: "A golf ball on a tee",
-        incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
-    },
-    {
-        question: "Where in Scotland is known as the home of golf?",
-        options: {
-            a: "Glasgow",
-            b: "Edinburgh",
-            c: "St Andrew's",
-            d: "Aberdeen"
-        },
-        correctAnswer: "c",
-        imageURL: "assets/images/golf.webp",
-        imageAlt: "A golf ball on a tee",
-        incorrectFeedback: "St Andrews in Scotland is known as the home of golf."
-    },
-    {
         question: "What did the 'Bill of Rights' confirm?",
         options: {
             a: "Kings can administer justice",
@@ -64,8 +38,8 @@ export const quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "./assets/images/parliament.webp",
+        imageAlt: "Westminster Palace",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
     },
     {
@@ -78,8 +52,8 @@ export const quizQuestions = [
         },
         correctAnswer: "a",
         category: "history",
-        imageURL: "",
-        imageAlt: "",
+        imageURL: "./assets/images/romanbath.webp",
+        imageAlt: "Roman Bath",
         incorrectFeedback: "The Romans remained in Britain for 400 years."
     },
     {
