@@ -1,4 +1,4 @@
-import { quizQuestions } from './questionbank.js';
+import { quizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
 
 document.addEventListener('DOMContentLoaded', function () {
     // set qnum to access index in quizQuestions array
@@ -30,43 +30,47 @@ function nextQuestion(){
         showResults();
     }
 }
-
+// clears answer highlights and feedback
 function clearAnswer(){
+    // change correct answer button color back to light blue
     let correctAnswerElements = document.querySelectorAll('.btn-success');
     correctAnswerElements.forEach(element => {
         element.classList.add('btn-light-blue');
         element.classList.remove('btn-success');
     });
+    // change incorrect answer button color back to light blue
     let incorrectAnswerElements = document.querySelectorAll('.btn-danger');
     incorrectAnswerElements.forEach(element => {
-        
         element.classList.add('btn-light-blue');
         element.classList.remove('btn-danger');
     });
+    // clear feedback
+    feedbackElement.innerText = "";
 }
 
 // submit answer
 function submitAnswer(e){
+    // clear previous feedback
     clearAnswer();
     const answerElement = e.currentTarget;
     let answer = answerElement.getAttribute('data-value');
     // check if userAnswer matches correctAnswer in quizQuestions array
     if (answer) {
         if (answer === quizQuestions[qnum].correctAnswer) {
-            // change button color to green with white text, move to CSS later
+            // change button color to green with white text
             answerElement.classList.add('btn-success');
             answerElement.classList.remove('btn-light-blue');
             correctNum++;
             score = Math.round((correctNum / totalAnswered) * 100);
             console.log(score);
-            // display correct feedback
+            // display feedback for correct answer
             feedbackElement.innerText = "Correct! Well done!";
         } else {
-            // change button color to red with white text, move to CSS later
+            // change button color to red with white text
             answerElement.classList.add('btn-danger');
             answerElement.classList.remove('btn-light-blue');
             incorrectNum++;
-            // display incorrect feedback
+            // display feedback for incorrect answer
             feedbackElement.innerText = quizQuestions[qnum].incorrectFeedback;
 
         }
@@ -77,9 +81,10 @@ function submitAnswer(e){
     
 }
 
-// build the results page
+// builds the results page
 function showResults(){
     let resultsElement = document.getElementById('questionArea');
+    // set comments and gifs for different score ranges
     const comments = [
         "<strong>You are a True Brit at Heart!</strong> Fantastic job passing your Life in the UK test! Your understanding of British life and culture is impressive. Welcome to your new home!",
         "<strong>You are a UK Citizen Extraordinaire!</strong> You know your fish and chips from your chicken tikka, keep practising! Your commitment are truly commendable. Welcome to the UK family!", 
@@ -121,6 +126,7 @@ function showResults(){
         gifURL = gifURLs[2];
         gifAlt = gifAlts[2];
     }
+    // display results
     resultsElement.innerHTML = `<h2>Results</h2>
     <div class="row justify-content-center">
             <div class="col-12 col-md-6 mb-2">
