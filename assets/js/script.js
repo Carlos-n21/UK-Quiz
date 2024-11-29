@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // set feedbackElement to display feedback to user
     let feedbackElement = document.getElementById('feedback');
     // set quizLength to number of questions per round
-    let quizLength = 10;
+    let quizLength = 40;
     // set totalAnswered to number of questions answered
     let totalAnswered = 0;
     
@@ -56,7 +56,6 @@ function clearAnswer(){
 // calculate score
 function calculateScore(){
     score = Math.round((correctNum / totalAnswered) * 100);
-    console.log("Score: "+score);
 }
 
 // submit answer
