@@ -91,7 +91,7 @@ body {
 
 /* Style to hide nextButton onLoad */
 #nextButton {
-    display: none;
+    display: inline;
 }
 
 /* Style for feedback text */

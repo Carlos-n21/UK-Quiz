@@ -19,22 +19,21 @@
     <title>UK Quiz</title>
      
 </head>
-<body>
+<body id="quiz">
     <main>
     <div class="container">
         <h1>
             <img src="assets/images/logo.png" alt="Website logo" id="img-logo">
         </h1>
     <div id="questionArea">
-        <h3>Question <span class="questionNum"></span></h3>
+        <h3><span class="questionNum"></span></h3>
         <p id="questionText"></p>
         <img id=questionImage src="" alt="">
         <div id="optionSet" my-3></div>
-        <div id="feedback"></div>      
-        <div id="questionCounter">
-        <a href="#" id="prevButton"><i class="fa-solid fa-square-caret-left"></i></a>
-        <span>Question <span class="questionNum"></span> of <span id="quizLength"></span></span>
-        <a href="#" id="nextButton"><i class="fa-solid fa-square-caret-right"></i></a>
+        <div id="feedback"></div>
+        <div>      
+            <div id="questionCounter"></div>
+            <div id="nextButton"><a href="#" id="nextButton"><i class="fa-solid fa-square-caret-right"></i></a></div>
         </div>
     </div>
 </div>

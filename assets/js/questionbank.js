@@ -1,19 +1,5 @@
 // export quizQuestions array of objects
-export const quizQuestions = [
-    {
-        question: "What is the UK currency?",
-        options: {
-            a: "Euro",
-            b: "Dollar",
-            c: "Pound",
-            d: "Ruble"
-        },
-        correctAnswer: "c",
-        category: "law",
-        imageURL: "assets/images/questionbank/coins.webp",
-        imageAlt: "Some coins and notes",
-        incorrectFeedback: "The pound sterling, commonly known as the pound, is the official currency of the United Kingdom and is symbolised by £ with the currency code GBP."
-    },
+export const historyQuizQuestions = [
     {
         question: "What did the 'Bill of Rights' confirm?",
         options: {
@@ -23,7 +9,7 @@ export const quizQuestions = [
             d: "Kings can collect taxes"
         },
         correctAnswer: "b",
-        category: "history",
+        category: "law",
         imageURL: "assets/images/questionbank/history1_billOfRight.png",
         imageAlt: "Bill of Rights",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
@@ -153,8 +139,10 @@ export const quizQuestions = [
         imageURL: "assets/images/questionbank/history10_farmers.jpg",
         imageAlt: "First farmers building",
         incorrectFeedback: "The first farmers built houses, tombs and monuments on the land."
-    },
-    {
+    }
+];
+  
+export const geographyQuizQuestions = [{
         question: "Where in Scotland is known as the home of golf?",
         options: {
             a: "Glasgow",
@@ -293,8 +281,23 @@ export const quizQuestions = [
         imageURL: "assets/images/questionbank/geography10_swansea.jpg",
         imageAlt: "Swansea",
         incorrectFeedback: "Swansea is located in Wales."
+    }
+];
+export const lawQuizQuestions = [
+    {
+        question: "What is the UK currency?",
+        options: {
+            a: "Euro",
+            b: "Dollar",
+            c: "Pound",
+            d: "Ruble"
+        },
+        correctAnswer: "c",
+        category: "law",
+        imageURL: "assets/images/questionbank/coins.webp",
+        imageAlt: "Some coins and notes",
+        incorrectFeedback: "The pound sterling, commonly known as the pound, is the official currency of the United Kingdom and is symbolised by £ with the currency code GBP."
     },
-    
     
     {
         question: "What does the TV licence money pay for?",
@@ -435,7 +438,9 @@ export const quizQuestions = [
         imageURL: "assets/images/questionbank/law10_children.png",
         imageAlt: "Children at a playground",
         incorrectFeedback: "The National Society for the Prevention of Cruelty to Children (NSPCC) works with children."
-    },
+    }
+];
+export const cultureQuizQuestions = [
 
 
     {
