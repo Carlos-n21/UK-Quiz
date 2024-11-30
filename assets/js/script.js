@@ -13,49 +13,84 @@ let feedbackElement = document.getElementById('feedback');
 let quizLength = 40;
 // set totalAnswered to number of questions answered
 let totalAnswered = 0;
+// set category to chosen category
+let chosenCategory = localStorage.getItem('chosenCategory') || '';
 // set quizQuestions array to one of the quizQuestions arrays
-let quizQuestions = geographyQuizQuestions; // default to geographyQuizQuestions
+let questionSet = [];
+let quizQuestions = []; // default to geographyQuizQuestions
 let answer = "";
 
-// app.load
-// build categories
-//build quiz
-
- // page load event listener
+  // page load event listener
  const app = {
     init: () => {
         document.addEventListener('DOMContentLoaded', app.load);
+        console.log("init");
     },
     load: () => {
         app.getContent();
+        console.log("loaded");
+        chosenCategory = localStorage.getItem('chosenCategory');
     },
     // getContent decides which content to display by body#id
     getContent: () =>{
         let bodyId = document.body.id;
-        if (bodyId === 'categories') {
-            app.displayCategoriesContent();
-        } else if (bodyId === 'quiz') {
-            app.displayQuizContent();
+        switch (bodyId) {
+            case 'categories':
+                app.displayCategoriesContent();
+                break;
+            case 'quiz':
+                app.displayQuizContent();
+                updateQuiz(questionSet);
+                break;
+            default:
+                console.log("not caught" + bodyId);
+                break;
         }
     },
     // displayQuizContent function to display content for categories page
     displayCategoriesContent:() =>{
+        console.log("getContent: bodyId "+document.body.id);
         app.buildCategories();
-        // // document.getElementById('historyButton').addEventListener('click', function () {
-        //     window.location.href = "quiz.html";
-        // });
+            // add event listener for category buttons
+        const categoryButtons = document.querySelectorAll('.categoryBtn');
+        for (let button of categoryButtons) {
+            button.addEventListener('click', function(e){
+                console.log("EL target id"+e.currentTarget.id);
+                let clickedCategory = e.currentTarget.id;
+                // set quizQuestions array to one of the quizQuestions arrays
+                if (clickedCategory === "historyButton") {
+                    chosenCategory = "history";
+                } else if (clickedCategory === "geographyButton") {
+                    chosenCategory = "geography";
+                } else if (clickedCategory === "lawButton") {
+                    chosenCategory = "law";
+                } else if (clickedCategory === "cultureButton") {
+                    chosenCategory = "culture";
+                }
+              // set chosenCategory in localStorage
+                localStorage.setItem('chosenCategory', chosenCategory);
+                console.log("Stored category: "+chosenCategory);
+        //    // reset qnum, correctNum, incorrectNum, score, totalAnswered
+           qnum = 0;
+           correctNum = 0;
+           incorrectNum = 0;
+           score = 0;
+           totalAnswered = 0;
+           // set quizLength to number of questions per round
+           quizLength = 40;
+       });
+    }
     },
     // displayQuizContent function to display content for categories page
     displayQuizContent:() => {
+        console.log("getContent: bodyId "+document.body.id);
+        console.log("start displayQuizContent: chosenCat: " +chosenCategory);
+        
         app.buildQuiz();
-        console.log('displayQuizContent');
+        console.log("displayQuizContent: assigned questions "+quizQuestions[0].question);
     },
     // build categories page
     buildCategories:() => {
-    // add buttons for each category
-    // document.getElementsByTagName('body')[0].innerHTML = `<h1>Categories</h1>
-    // <a id="historyButton" href="quiz.html">History</a>
-    // <button id="geographyButton">Geography</button>`;
     let categoriesElement = document.querySelector("#buttonArea");
     categoriesElement.innerHTML = "";    
     categoriesElement.innerHTML = `<h3>Categories</h3>
@@ -77,51 +112,35 @@ let answer = "";
             </div>
         </div>
     </div>`;
-    },
+   },
 
     // build the quiz page for a specific question in the quizQuestions array
     buildQuiz:()=> {
-        updateQuiz();
+        console.log("first build chosenCat: " +chosenCategory);
+        if (chosenCategory) {
+            fetchQuestionSet(chosenCategory);
+        }updateQuiz(questionSet);
+        // event listener for nextQuestionButton
+    document.getElementById('nextButton').addEventListener("click",nextQuestion);
     }
+    
+    
 };
-
-// call app.init function
-app.init();
-
-function updateQuiz(){
-    
-    // add question number (= qnum index+1) to Quiz page
-    let questionCounterElement = document.getElementById('questionCounter');
-    let questionNumber = parseInt(qnum+1);
-    questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>
-        `;
-    // add question text to Quiz page
-    let questionTextElement = document.getElementById('questionText');
-    questionTextElement.innerText = quizQuestions[qnum].question;
-    // add question image and alt tag to Quiz page
-    let imageElement = document.getElementById('questionImage');
-    imageElement.src = quizQuestions[qnum].imageURL;
-    imageElement.alt = quizQuestions[qnum].imageAlt;
-    imageElement.width = "300"; //move width setting to css
-    // add answer options to Quiz page
-    let options = quizQuestions[qnum].options;
-    let optionsArray = Object.keys(options);
-    let optionSetDiv = document.getElementById('optionSet');
-    let optionSet = "";
-    for (let option of optionsArray) {
-        optionSet += `<button type='button' class='optionButton' data-value='${option}'>${option}) ${options[option]}</button>`;
+// function to assign quizQuestions array based on chosen category
+function fetchQuestionSet(chosenCategory){
+    if (chosenCategory === "history") {
+        questionSet = historyQuizQuestions;
+    } else if (chosenCategory === "geography") {
+        questionSet = geographyQuizQuestions;
+    } else if (chosenCategory === "law") {
+        questionSet = lawQuizQuestions;
+    } else if (chosenCategory === "culture") {
+        questionSet = cultureQuizQuestions;
     }
-    optionSetDiv.innerHTML = optionSet;
-    // add event listener to option buttons
-    let optionButtons = document.querySelectorAll('.optionButton');
-    for (let button of optionButtons) {
-        button.addEventListener('click', submitAnswer); 
-            let selectedButton = button.getAttribute('data-value');
-            answer = selectedButton;
-        }
-    
-    console.log('buildQuiz');
-    }
+    console.log("fetchQuestionSet: assigned questions "+questionSet[0].question);
+    return questionSet;
+}
+
 
 // show next button
 function showNextButton(){
@@ -134,28 +153,65 @@ function showNextButton(){
 function nextQuestion(){
     if (totalAnswered < quizLength-1) {
         qnum++;
-       updateQuiz();
+       updateQuiz(questionSet);
         feedbackElement.innerText = "";
     } else {
         showResults();
     }
 }
-// event listener for nextQuestionButton
-document.getElementById('nextButton').addEventListener("click",nextQuestion);
 
+function updateQuiz(questionSet) {
+    console.log(questionSet);
+    if (!questionSet || questionSet.length === 0) {
+        console.error("updateQuiz: questionSet is empty or undefined");
+        return;
+    }
+    if (qnum < 0 || qnum >= questionSet.length) {
+        console.error("updateQuiz: qnum is out of bounds");
+        return;
+    }
+    console.log("start updateQuiz: assigned questions " + questionSet[qnum].question);
+    // add question number (= qnum index+1) to Quiz page
+    let questionCounterElement = document.querySelector('#questionCounter');
+    console.log("bodyid " + document.body.id);
+    let questionNumber = parseInt(qnum + 1);
+    questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>`;
+    // add question text to Quiz page
+    let questionTextElement = document.getElementById('questionText');
+    questionTextElement.innerText = questionSet[qnum].question;
+    // add question image and alt tag to Quiz page
+    let imageElement = document.getElementById('questionImage');
+    imageElement.src = questionSet[qnum].imageURL;
+    imageElement.alt = questionSet[qnum].imageAlt;
+    imageElement.width = "300"; //move width setting to css
+    // add answer options to Quiz page
+    let options = questionSet[qnum].options;
+    let optionsArray = Object.keys(options);
+    let optionSetDiv = document.getElementById('optionSet');
+    let optionSet = "";
+    for (let option of optionsArray) {
+        optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${option}'>${option}) ${options[option]}</button>`;
+    }
+    optionSetDiv.innerHTML = optionSet;
+    // add event listener to option buttons
+    let optionButtons = document.querySelectorAll('.optionButton');
+    for (let button of optionButtons) {
+        button.addEventListener('click', submitAnswer);
+    }
+}
 
 // clears answer highlights and feedback
 function clearAnswer(){
     // change correct answer button color back to light blue
     let correctAnswerElements = document.querySelectorAll('.btn-success');
     correctAnswerElements.forEach(element => {
-        element.classList.add('btn-light-blue');
+        element.classList.add('btn-secondary');
         element.classList.remove('btn-success');
     });
     // change incorrect answer button color back to light blue
     let incorrectAnswerElements = document.querySelectorAll('.btn-danger');
     incorrectAnswerElements.forEach(element => {
-        element.classList.add('btn-light-blue');
+        element.classList.add('btn-secondary');
         element.classList.remove('btn-danger');
     });
     // clear feedback
@@ -167,51 +223,26 @@ function clearAnswer(){
         score = Math.round((correctNum / totalAnswered) * 100);
     }
   
-   // add event listener for category buttons
-   const categoryButtons = document.querySelectorAll('.categoryBtn');
-   console.log(categoryButtons);
-   for (let button of categoryButtons) {
-       button.addEventListener('click', function(e){
-           // set quizQuestions array to one of the quizQuestions arrays
-           if (e.currentTarget.id === "historyButton") {
-               quizQuestions = historyQuizQuestions;
-               console.log("historyQuizQuestions");
-           } else if (e.currentTarget.id === "geographyButton") {
-               quizQuestions = geographyQuizQuestions;
-           } else if (e.currentTarget.id === "lawButton") {
-               quizQuestions = lawQuizQuestions;
-           } else if (e.currentTarget.id === "cultureButton") {
-               quizQuestions = cultureQuizQuestions;
-           }
-        //    // reset qnum, correctNum, incorrectNum, score, totalAnswered
-           qnum = 0;
-           correctNum = 0;
-           incorrectNum = 0;
-           score = 0;
-           totalAnswered = 0;
-           // set quizLength to number of questions per round
-           quizLength = 40;
-           // build quiz
-           updateQuiz();
-       });
-   }
 
-    
+
+
 
 
 
 // submit answer
 function submitAnswer(e){
+    // increment totalAnswered
+    totalAnswered++;
     // clear previous feedback
     clearAnswer();
     const answerElement = e.currentTarget;
     answer = answerElement.getAttribute('data-value');
     // check if userAnswer matches correctAnswer in quizQuestions array
     if (answer) {
-        if (answer === quizQuestions[qnum].correctAnswer) {
+        if (answer === questionSet[qnum].correctAnswer) {
             // change button color to green with white text
             answerElement.classList.add('btn-success');
-            answerElement.classList.remove('btn-light-blue');
+            answerElement.classList.remove('btn-secondary');
             correctNum++;
             console.log("correct:"+correctNum+" totalAnswered:"+totalAnswered);
             // display feedback for correct answer
@@ -219,19 +250,21 @@ function submitAnswer(e){
         } else {
             // change button color to red with white text
             answerElement.classList.add('btn-danger');
-            answerElement.classList.remove('btn-light-blue');
+            answerElement.classList.remove('btn-secondary');
             incorrectNum++;
-            console.log("correct:"+correctNum+" totalAnswered:"+totalAnswered);
+            console.log("correct:"+correctNum+" incorrect:"+incorrectNum+" totalAnswered:"+totalAnswered);
             // display feedback for incorrect answer
-            feedbackElement.innerText = quizQuestions[qnum].incorrectFeedback;
-
+            feedbackElement.innerText = questionSet[qnum].incorrectFeedback;
         }
+        // disable option buttons
+        optionButtons.forEach(button => {
+            button.disabled = true;
+        });
     } else {
         // handle case where no answer is selected
         feedbackElement.innerText = "Please select an answer";
     }
-    // increment totalAnswered
-    totalAnswered++;
+    
     showNextButton();
     
 }
@@ -314,3 +347,5 @@ function showResults(){
     `;
 }
 
+// call app.init function
+app.init();
