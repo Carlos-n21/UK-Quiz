@@ -80,7 +80,7 @@ export const historyQuizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "assets/images/questionbank/history6_blackDeath.jpg",
+        imageURL: "assets/images/questionbank/history6_blackdeath.png",
         imageAlt: "Illustration of the Black Death",
         incorrectFeedback: "One third of the population of England and a similar proportion in Scotland and Wales died because of the Black Death."
     },
@@ -94,7 +94,7 @@ export const historyQuizQuestions = [
         },
         correctAnswer: "c",
         category: "history",
-        imageURL: "assets/images/questionbank/history7_queenElizabeth.jpg",
+        imageURL: "assets/images/questionbank/history7_royal.png",
         imageAlt: "Queen Elizabeth I",
         incorrectFeedback: "Queen Elizabeth I became one of the most popular monarchs in English history, particularly after 1588, when the English defeated the Spanish Armada."
     },
@@ -108,7 +108,7 @@ export const historyQuizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "assets/images/questionbank/history8_ireland.jpg",
+        imageURL: "assets/images/questionbank/history8_Ireland.jpg",
         imageAlt: "Map of Ireland showing the split",
         incorrectFeedback: "Ireland became two countries in 1922."
     },
@@ -122,7 +122,7 @@ export const historyQuizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "assets/images/questionbank/history9_battleOfWaterloo.jpg",
+        imageURL: "assets/images/questionbank/history9_waterloo.jpg",
         imageAlt: "Illustration of the Battle of Waterloo",
         incorrectFeedback: "In 1815, the French Wars ended with the defeat of the Emperor Napoleon by the Duke of Wellington at the Battle of Waterloo."
     },
@@ -136,7 +136,7 @@ export const historyQuizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "assets/images/questionbank/history10_farmers.jpg",
+        imageURL: "assets/images/questionbank/history10_farmer.jpg",
         imageAlt: "First farmers building",
         incorrectFeedback: "The first farmers built houses, tombs and monuments on the land."
     }
@@ -250,7 +250,7 @@ export const geographyQuizQuestions = [{
         },
         correctAnswer: "d",
         category: "geography",
-        imageURL: "assets/images/questionbank/geography8_crownDependencies.jpg",
+        imageURL: "assets/images/questionbank/geography8_crownDependencies.webp",
         imageAlt: "Coat of arms of the Crown Dependencies",
         incorrectFeedback: "The Channel Islands and the Isle of Man are closely related to the UK but are not part of it. They have their own governments and are called 'Crown dependencies'."
     },
