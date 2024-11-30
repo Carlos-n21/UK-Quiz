@@ -1,4 +1,4 @@
-import { quizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
+import { historyQuizQuestions, geographyQuizQuestions, lawQuizQuestions, cultureQuizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
 
 document.addEventListener('DOMContentLoaded', function () {
     // set qnum to access index in quizQuestions array
@@ -15,7 +15,63 @@ document.addEventListener('DOMContentLoaded', function () {
     let quizLength = 40;
     // set totalAnswered to number of questions answered
     let totalAnswered = 0;
+    // set quizQuestions array to one of the quizQuestions arrays
+    let quizQuestions = [];
     
+    // build category buttons
+    function buildCategories(){
+        let categoriesElement = document.getElementById('questionArea');
+        categoriesElement.innerHTML = "";    
+        categoriesElement.innerHTML = `<h3>Categories</h3>
+            <p>(Choose a category)</p>
+            <div class="row">
+                <div class="col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
+                    <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">History</a>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">Geography</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">Law and Society</a>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">Sports and Culture</a>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="button" id="home">Home</a>`;
+    }
+
+    buildCategories();
+    // add event listener for category buttons
+    const categoryButtons = document.querySelectorAll('.categoryBtn');
+    for (let button of categoryButtons) {
+        button.addEventListener('click', function(e){
+            // set quizQuestions array to one of the quizQuestions arrays
+            if (e.currentTarget.id === "historyButton") {
+                quizQuestions = historyQuizQuestions;
+                console.log("historyQuizQuestions");
+            } else if (e.currentTarget.id === "geographyButton") {
+                quizQuestions = geographyQuizQuestions;
+            } else if (e.currentTarget.id === "lawButton") {
+                quizQuestions = lawQuizQuestions;
+            } else if (e.currentTarget.id === "cultureButton") {
+                quizQuestions = cultureQuizQuestions;
+            }
+            // reset qnum, correctNum, incorrectNum, score, totalAnswered
+            qnum = 0;
+            correctNum = 0;
+            incorrectNum = 0;
+            score = 0;
+            totalAnswered = 0;
+            // set quizLength to number of questions per round
+            quizLength = 40;
+            // build quiz
+            buildQuiz();
+        }
+    });
 // event listener for nextQuestionButton
 document.getElementById('nextButton').addEventListener("click",nextQuestion);
 
@@ -151,7 +207,7 @@ function showResults(){
             <div class="col-12 col-md-6">
             <div style="width:100%;height:0;padding-bottom:56%;">
             <iframe src="${animgifURL}" width="90%" height="90%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            <p><a href="${gifURL} alt="${gifAlt} target="_blank">via GIPHY</a></p>
+            <div><a href="${gifURL} alt="${gifAlt} target="_blank">via GIPHY</a><div>
             </div>
             </div>
         </div>
@@ -173,6 +229,11 @@ function showResults(){
 
 // build the quiz page for a specific question in the quizQuestions array
 function buildQuiz(){
+    // add questionCounter and next button to Quiz page
+    let questionCounterElement = document.getElementById('questionCounter');
+    questionCounterElement.innerHTML = `<span>Question <span class="questionNum"></span> of <span id="quizLength"></span></span>
+        <a href="#" id="nextButton"><i class="fa-solid fa-square-caret-right"></i></a>
+        `;
     // add question number (= qnum index+1) to Quiz page
     let questionNumberSpan = document.querySelectorAll('.questionNum');
     for (let q of questionNumberSpan) {
@@ -205,8 +266,9 @@ function buildQuiz(){
         button.addEventListener('click', submitAnswer); 
         button.addEventListener('click', showNextButton);
         }
+    
     }
     
 
-    buildQuiz();
+    
 });
