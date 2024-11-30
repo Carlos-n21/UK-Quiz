@@ -58,6 +58,10 @@ body {
     margin: 0 10px;
 }
 
+.category-buttons i {
+    min-width: auto;
+}
+
 /* Style for Play and Rules buttons */
 .container .button {
     display: block;
@@ -84,22 +88,42 @@ body {
     background-color: white;
     border: black 1px solid;
 }
+
+/* Style for game container */
+#quiz-container {
+    min-height: 45vh;
+}
 /* Style to hide prevButton onLoad */
 #prevButton {
-    display: none;
+    
 }
 
 /* Style to hide nextButton onLoad */
-#nextButton {
+#nextButton i {
     display: inline;
+    width: 5rem;
+    color: #008fe5;
+}
+
+#nextButton:hover {
+    background-color: #a0d4f7; /* Change background color on hover */
+    color: white; /* Change text color on hover */
 }
 
 /* Style for feedback text */
 #feedback {
-    width: 300px;
+    min-height: 4rem;
+    padding: 0 5rem;
+    width: 100%
     font-size: 1rem;
     margin-top: 0.8rem;
     text-align: left;
+}
+
+#questionCounter {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display:inline-block;
 }
 
 /* bottom margin manually changed botton property from Copilot code 

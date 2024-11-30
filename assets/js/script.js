@@ -87,28 +87,16 @@ let answer = "";
         console.log("start displayQuizContent: chosenCat: " +chosenCategory);
         
         app.buildQuiz();
-        console.log("displayQuizContent: assigned questions "+quizQuestions[0].question);
     },
     // build categories page
     buildCategories:() => {
     let categoriesElement = document.querySelector("#buttonArea");
     categoriesElement.innerHTML = "";    
-    categoriesElement.innerHTML = `<h3>Categories</h3>
-        <p>(Choose a category)</p>
-        <div class="row">
-            <div class="col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
-                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">History</a>
-            </div>
-            <div class="col-md-6 mb-2">
-                <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">Geography</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-2">
-                <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">Law and Society</a>
-            </div>
-            <div class="col-md-6 mb-2">
-                <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">Sports and Culture</a>
+    categoriesElement.innerHTML = `<h3>Categories</h3><p>(Choose a category)</p><div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
+                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns" style="width: 20px;"></i>History</a>
+            </div><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe" style="width: 20px;"></i>Geography</a>
+            </div></div><div class="row"><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced" style="width: 20px;"></i>Law and Society</a>
+            </div><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture"><i class="fa-solid fa-masks-theater" style="width: 20px;"></i>Sports and Culture</a>
             </div>
         </div>
     </div>`;
@@ -145,8 +133,12 @@ function fetchQuestionSet(chosenCategory){
 // show next button
 function showNextButton(){
     let nextButton = document.getElementById('nextButton');
-    console.log(nextButton);
-    nextButton.style.display = "inline";
+    if (nextButton) {
+        console.log(nextButton);
+        nextButton.style.visibility = "visible";
+    } else {
+        console.error("showNextButton: nextButton element not found");
+    }
 }
 
 // displays the next question
@@ -183,15 +175,26 @@ function updateQuiz(questionSet) {
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
     imageElement.alt = questionSet[qnum].imageAlt;
-    imageElement.width = "300"; //move width setting to css
+    imageElement.width = "450"; //move width setting to css
     // add answer options to Quiz page
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
     let optionSetDiv = document.getElementById('optionSet');
-    let optionSet = "";
-    for (let option of optionsArray) {
-        optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${option}'>${option}) ${options[option]}</button>`;
-    }
+    console.log("options: "+options);
+    let optionSet = '<div class="row mx-auto">';
+    optionSet += '<div class="col-12 col-md-6 mb-2">';
+    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[0]}'>${optionsArray[0]}) ${options[optionsArray[0]]}</button>`;
+    optionSet += "</div>";
+    optionSet += '<div class="col-12 col-md-6 mb-2">';
+    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[1]}'>${optionsArray[1]}) ${options[optionsArray[1]]}</button>`;
+    optionSet += "</div>";
+    optionSet += '<div class="col-12 col-md-6 mb-2">';
+    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[2]}'>${optionsArray[2]}) ${options[optionsArray[2]]}</button>`;
+    optionSet += "</div>";
+    optionSet += '<div class="col-12 col-md-6 mb-2">';
+    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[3]}'>${optionsArray[3]}) ${options[optionsArray[3]]}</button>`;    
+    optionSet += "</div>";
+    optionSet += "</div>";
     optionSetDiv.innerHTML = optionSet;
     // add event listener to option buttons
     let optionButtons = document.querySelectorAll('.optionButton');
@@ -256,14 +259,13 @@ function submitAnswer(e){
             // display feedback for incorrect answer
             feedbackElement.innerText = questionSet[qnum].incorrectFeedback;
         }
-        // disable option buttons
-        optionButtons.forEach(button => {
-            button.disabled = true;
-        });
     } else {
         // handle case where no answer is selected
         feedbackElement.innerText = "Please select an answer";
     }
+    document.querySelectorAll('.optionButton').forEach(button => {
+        button.disabled = true;
+    });
     
     showNextButton();
     
