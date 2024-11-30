@@ -14,7 +14,7 @@ let quizLength = 40;
 // set totalAnswered to number of questions answered
 let totalAnswered = 0;
 // set quizQuestions array to one of the quizQuestions arrays
-let quizQuestions = historyQuizQuestions; // default to historyQuizQuestions
+let quizQuestions = geographyQuizQuestions; // default to geographyQuizQuestions
 let answer = "";
 
 // app.load
