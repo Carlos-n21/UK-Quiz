@@ -1,83 +1,132 @@
 import { historyQuizQuestions, geographyQuizQuestions, lawQuizQuestions, cultureQuizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
+// set qnum to access index in quizQuestions array
+let qnum = 0;
+// set correctNum as number of questions answered correctly
+let correctNum = 0;
+// set incorrectNum as number of questions answered incorrectly
+let incorrectNum = 0;
+// set score as percentage of correct answers
+let score = 0;
+// set feedbackElement to display feedback to user
+let feedbackElement = document.getElementById('feedback');
+// set quizLength to number of questions per round
+let quizLength = 40;
+// set totalAnswered to number of questions answered
+let totalAnswered = 0;
+// set quizQuestions array to one of the quizQuestions arrays
+let quizQuestions = historyQuizQuestions; // default to historyQuizQuestions
+let answer = "";
 
-document.addEventListener('DOMContentLoaded', function () {
-    // set qnum to access index in quizQuestions array
-    let qnum = 0;
-    // set correctNum as number of questions answered correctly
-    let correctNum = 0;
-    // set incorrectNum as number of questions answered incorrectly
-    let incorrectNum = 0;
-    // set score as percentage of correct answers
-    let score = 0;
-    // set feedbackElement to display feedback to user
-    let feedbackElement = document.getElementById('feedback');
-    // set quizLength to number of questions per round
-    let quizLength = 40;
-    // set totalAnswered to number of questions answered
-    let totalAnswered = 0;
-    // set quizQuestions array to one of the quizQuestions arrays
-    let quizQuestions = [];
-    
-    // build category buttons
-    function buildCategories(){
-        let categoriesElement = document.getElementById('questionArea');
-        categoriesElement.innerHTML = "";    
-        categoriesElement.innerHTML = `<h3>Categories</h3>
-            <p>(Choose a category)</p>
-            <div class="row">
-                <div class="col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
-                    <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">History</a>
-                </div>
-                <div class="col-md-6 mb-2">
-                    <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">Geography</a>
-                </div>
+// app.load
+// build categories
+//build quiz
+
+ // page load event listener
+ const app = {
+    init: () => {
+        document.addEventListener('DOMContentLoaded', app.load);
+    },
+    load: () => {
+        app.getContent();
+    },
+    // getContent decides which content to display by body#id
+    getContent: () =>{
+        let bodyId = document.body.id;
+        if (bodyId === 'categories') {
+            app.displayCategoriesContent();
+        } else if (bodyId === 'quiz') {
+            app.displayQuizContent();
+        }
+    },
+    // displayQuizContent function to display content for categories page
+    displayCategoriesContent:() =>{
+        app.buildCategories();
+        // // document.getElementById('historyButton').addEventListener('click', function () {
+        //     window.location.href = "quiz.html";
+        // });
+    },
+    // displayQuizContent function to display content for categories page
+    displayQuizContent:() => {
+        app.buildQuiz();
+        console.log('displayQuizContent');
+    },
+    // build categories page
+    buildCategories:() => {
+    // add buttons for each category
+    // document.getElementsByTagName('body')[0].innerHTML = `<h1>Categories</h1>
+    // <a id="historyButton" href="quiz.html">History</a>
+    // <button id="geographyButton">Geography</button>`;
+    let categoriesElement = document.querySelector("#buttonArea");
+    categoriesElement.innerHTML = "";    
+    categoriesElement.innerHTML = `<h3>Categories</h3>
+        <p>(Choose a category)</p>
+        <div class="row">
+            <div class="col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
+                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">History</a>
             </div>
-            <div class="row">
-                <div class="col-md-6 mb-2">
-                    <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">Law and Society</a>
-                </div>
-                <div class="col-md-6 mb-2">
-                    <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">Sports and Culture</a>
-                </div>
+            <div class="col-md-6 mb-2">
+                <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">Geography</a>
             </div>
         </div>
-        <a href="index.html" class="button" id="home">Home</a>`;
-    }
+        <div class="row">
+            <div class="col-md-6 mb-2">
+                <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">Law and Society</a>
+            </div>
+            <div class="col-md-6 mb-2">
+                <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">Sports and Culture</a>
+            </div>
+        </div>
+    </div>`;
+    },
 
-    buildCategories();
-    // add event listener for category buttons
-    const categoryButtons = document.querySelectorAll('.categoryBtn');
-    for (let button of categoryButtons) {
-        button.addEventListener('click', function(e){
-            // set quizQuestions array to one of the quizQuestions arrays
-            if (e.currentTarget.id === "historyButton") {
-                quizQuestions = historyQuizQuestions;
-                console.log("historyQuizQuestions");
-            } else if (e.currentTarget.id === "geographyButton") {
-                quizQuestions = geographyQuizQuestions;
-            } else if (e.currentTarget.id === "lawButton") {
-                quizQuestions = lawQuizQuestions;
-            } else if (e.currentTarget.id === "cultureButton") {
-                quizQuestions = cultureQuizQuestions;
-            }
-            // reset qnum, correctNum, incorrectNum, score, totalAnswered
-            qnum = 0;
-            correctNum = 0;
-            incorrectNum = 0;
-            score = 0;
-            totalAnswered = 0;
-            // set quizLength to number of questions per round
-            quizLength = 40;
-            // build quiz
-            buildQuiz();
+    // build the quiz page for a specific question in the quizQuestions array
+    buildQuiz:()=> {
+        updateQuiz();
+    }
+};
+
+// call app.init function
+app.init();
+
+function updateQuiz(){
+    
+    // add question number (= qnum index+1) to Quiz page
+    let questionCounterElement = document.getElementById('questionCounter');
+    let questionNumber = parseInt(qnum+1);
+    questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>
+        `;
+    // add question text to Quiz page
+    let questionTextElement = document.getElementById('questionText');
+    questionTextElement.innerText = quizQuestions[qnum].question;
+    // add question image and alt tag to Quiz page
+    let imageElement = document.getElementById('questionImage');
+    imageElement.src = quizQuestions[qnum].imageURL;
+    imageElement.alt = quizQuestions[qnum].imageAlt;
+    imageElement.width = "300"; //move width setting to css
+    // add answer options to Quiz page
+    let options = quizQuestions[qnum].options;
+    let optionsArray = Object.keys(options);
+    let optionSetDiv = document.getElementById('optionSet');
+    let optionSet = "";
+    for (let option of optionsArray) {
+        optionSet += `<button type='button' class='optionButton' data-value='${option}'>${option}) ${options[option]}</button>`;
+    }
+    optionSetDiv.innerHTML = optionSet;
+    // add event listener to option buttons
+    let optionButtons = document.querySelectorAll('.optionButton');
+    for (let button of optionButtons) {
+        button.addEventListener('click', submitAnswer); 
+            let selectedButton = button.getAttribute('data-value');
+            answer = selectedButton;
         }
-    });
-// event listener for nextQuestionButton
-document.getElementById('nextButton').addEventListener("click",nextQuestion);
+    
+    console.log('buildQuiz');
+    }
 
 // show next button
 function showNextButton(){
     let nextButton = document.getElementById('nextButton');
+    console.log(nextButton);
     nextButton.style.display = "inline";
 }
 
@@ -85,12 +134,16 @@ function showNextButton(){
 function nextQuestion(){
     if (totalAnswered < quizLength-1) {
         qnum++;
-        buildQuiz();
+       updateQuiz();
         feedbackElement.innerText = "";
     } else {
         showResults();
     }
 }
+// event listener for nextQuestionButton
+document.getElementById('nextButton').addEventListener("click",nextQuestion);
+
+
 // clears answer highlights and feedback
 function clearAnswer(){
     // change correct answer button color back to light blue
@@ -109,17 +162,50 @@ function clearAnswer(){
     feedbackElement.innerText = "";
 }
 
-// calculate score
-function calculateScore(){
-    score = Math.round((correctNum / totalAnswered) * 100);
-}
+    // calculate score
+    function calculateScore(){
+        score = Math.round((correctNum / totalAnswered) * 100);
+    }
+  
+   // add event listener for category buttons
+   const categoryButtons = document.querySelectorAll('.categoryBtn');
+   console.log(categoryButtons);
+   for (let button of categoryButtons) {
+       button.addEventListener('click', function(e){
+           // set quizQuestions array to one of the quizQuestions arrays
+           if (e.currentTarget.id === "historyButton") {
+               quizQuestions = historyQuizQuestions;
+               console.log("historyQuizQuestions");
+           } else if (e.currentTarget.id === "geographyButton") {
+               quizQuestions = geographyQuizQuestions;
+           } else if (e.currentTarget.id === "lawButton") {
+               quizQuestions = lawQuizQuestions;
+           } else if (e.currentTarget.id === "cultureButton") {
+               quizQuestions = cultureQuizQuestions;
+           }
+        //    // reset qnum, correctNum, incorrectNum, score, totalAnswered
+           qnum = 0;
+           correctNum = 0;
+           incorrectNum = 0;
+           score = 0;
+           totalAnswered = 0;
+           // set quizLength to number of questions per round
+           quizLength = 40;
+           // build quiz
+           updateQuiz();
+       });
+   }
+
+    
+
+
 
 // submit answer
 function submitAnswer(e){
     // clear previous feedback
     clearAnswer();
     const answerElement = e.currentTarget;
-    let answer = answerElement.getAttribute('data-value');
+    answer = answerElement.getAttribute('data-value');
     // check if userAnswer matches correctAnswer in quizQuestions array
     if (answer) {
         if (answer === quizQuestions[qnum].correctAnswer) {
@@ -146,10 +232,11 @@ function submitAnswer(e){
     }
     // increment totalAnswered
     totalAnswered++;
+    showNextButton();
     
 }
 
-// builds the results page
+// // builds the results page
 function showResults(){
     let resultsElement = document.getElementById('questionArea');
     // calculate score
@@ -227,48 +314,3 @@ function showResults(){
     `;
 }
 
-// build the quiz page for a specific question in the quizQuestions array
-function buildQuiz(){
-    // add questionCounter and next button to Quiz page
-    let questionCounterElement = document.getElementById('questionCounter');
-    questionCounterElement.innerHTML = `<span>Question <span class="questionNum"></span> of <span id="quizLength"></span></span>
-        <a href="#" id="nextButton"><i class="fa-solid fa-square-caret-right"></i></a>
-        `;
-    // add question number (= qnum index+1) to Quiz page
-    let questionNumberSpan = document.querySelectorAll('.questionNum');
-    for (let q of questionNumberSpan) {
-        q.innerText = parseInt(qnum+1);
-    }
-    // add question text to Quiz page
-    let questionTextElement = document.getElementById('questionText');
-    questionTextElement.innerText = quizQuestions[qnum].question;
-    // add question image and alt tag to Quiz page
-    let imageElement = document.getElementById('questionImage');
-    imageElement.src = quizQuestions[qnum].imageURL;
-    imageElement.alt = quizQuestions[qnum].imageAlt;
-    imageElement.width = "300"; //move width setting to css
-    // add answer options to Quiz page
-    let options = quizQuestions[qnum].options;
-    let optionsArray = Object.keys(options);
-    let optionSetDiv = document.getElementById('optionSet');
-    let optionSet = "";
-    for (let option of optionsArray) {
-        optionSet += `<a href='#' type='button' class='btn btn-light-blue btn-block optionButton' data-value='${option}'>${option}) ${options[option]}</a>`;
-    }
-    optionSetDiv.innerHTML = optionSet;
-    // add number of questions to Quiz page
-    let quizLengthElement = document.getElementById('quizLength');
-    quizLengthElement.innerText = quizLength;
-    
-    // add event listener to option buttons
-    let optionButtons = document.querySelectorAll('.optionButton');
-    for (let button of optionButtons) {
-        button.addEventListener('click', submitAnswer); 
-        button.addEventListener('click', showNextButton);
-        }
-    
-    }
-    
-
-    
-});
