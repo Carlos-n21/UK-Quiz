@@ -10,7 +10,7 @@ let score = 0;
 // set feedbackElement to display feedback to user
 let feedbackElement = document.getElementById('feedback');
 // set quizLength to number of questions per round
-let quizLength = 40;
+let quizLength = 10;
 // set totalAnswered to number of questions answered
 let totalAnswered = 0;
 // set category to chosen category
