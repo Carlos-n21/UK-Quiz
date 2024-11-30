@@ -100,10 +100,19 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 
 ## Website Features
 - Homepage
+  <img src="">
+
 - Rules - modal
+  <img src="assets/images/Rules-modal.png">
+
 - Categories
+  <img src="assets/images/categories-startgame.png">
+
 - Quiz page
+  <img src="">
+
 - Results
+  <img src="">
 
 [Back to top](#top)
 
