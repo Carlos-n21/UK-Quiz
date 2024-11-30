@@ -3,6 +3,7 @@ body {
     background-image: url('../images/london-eye-wide-2.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat; /* Added to prevent background image from repeating */
     display: flex;
     justify-content: center;
     align-items: center;
