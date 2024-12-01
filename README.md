@@ -66,15 +66,21 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 On the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe, and we were limited to using the technologies we have learnt so far on the course so we couldn't include any requirements that needed a database backend.
 
 ### User Stories
-(Placeholde table, needs to be replaced with final user stories)
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
+| User Stories                                    | MoSCoW priority           |  Status |
+| ----------------------------------------------- |:-------------------------:| -------:|
+| Homepage                                        | must have                 |   Done  |
+| Choose Quiz by Category                         | must have                 |   Done  |
+| Show Quiz Question                              | must have                 |   WIP   |
+| Mark Answers and Give Feedback                  | must have                 |   Done  |
+| Show Score and Results                          | must have                 |   Done  |
+| Icons, logos and favicon                        | must have                 |   Done  |
+| Rules Modal                                     | should have               |   Done  |
+| Progress Indicator                              | should have               |   WIP   |
 
-This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
+All user stories were logged on the [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have.
 
+As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
 ### Wireframes
 
@@ -91,8 +97,12 @@ This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/
 
 ## Design
 ### Colour Scheme
-- Color palette used<br>
-  <img src="assets/images/color-palette.png">
+We took inspiration from the Union Jack and websites associated with the British identity, such as [official site for the Royal Family](https://www.royal.uk/). We also used prompts in Co-pilot and ChatGPT which recommended the following colours:
+![image](https://github.com/user-attachments/assets/4752782b-5b5c-42f6-a7ed-9b5652d06dbb)
+
+Based on these suggestions and using [Colorspace Color Palette Generator](https://mycolor.space/?hex=%2300247D&sub=1), we decided to use the following palettes:<br>
+![palette](https://github.com/user-attachments/assets/62e3c5f4-68fe-451b-80bf-92338f2bf05d)
+![image (1)](https://github.com/user-attachments/assets/1923c199-c886-4312-a689-68aeb24d1c3a)
 
 - Contrast check for correct and incorrect answer on quiz<br>
   <img src="assets/images/color-contrast-wrong-answer.png"> <img src="assets/images/green-color-contrast-rightanswer.png">
@@ -112,16 +122,21 @@ This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/
 - Rules - modal
   <img src="assets/images/Rules-modal.png">
 
-- Categories
+- Categories, Quiz and Results Pages
   <img src="assets/images/categories-startgame.png">
+ <img src="assets/images/home-button-categories.png">
+The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily.
 
-  <img src="assets/images/home-button-categories.png">
+By clicking on the category button, users are taken to the Quiz. One question is displayed on the chosen category at a time, and users must choose one of the answer options before the Next button appears to take them to the next question. They can only attempt each question once in each round.
+ 
+At the end of the round, which is currently set to 10 questions, users are given their scores: the total number of correct and incorrect answers they got, as well as the score as a percentage. In the actual Life in the UK exam, users are required to answer 24 questions and get at least 18 in order to pass, so the pass rate is 75%. By providing the score in this format, users can track their performance and focus on their weaker areas where necessary.
 
-- Quiz page
+These three UI were initially built in HTML using CSS and Bootstrap Grids. The main javascript file script.js contains an event listener for the page load, and the content loaded is determined based on the ID in the body tag of the Categories and Quiz pages.
+
   <img src="">
 
-- Results
-  <img src="">
+- Question Bank
+Since there is currently no publicly available API to the Life in the UK test questions, we decided to use a question bank in our project. We implemented this as an additional Javascript file which contains 4 arrays of question Objects, one for each category. These are exported and imported into the main javascript file using ES6 version import/export.
 
 [Back to top](#top)
 
