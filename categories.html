@@ -20,7 +20,7 @@
      
 </head>
 <body id="categories">
-    <div id="categories" class="container">
+    <div id="categories" class="container changeable">
         <h1>
             <img src="assets/images/logo.png" alt="Website logo" id="img-logo">
         </h1>
@@ -29,18 +29,18 @@
             <p>(Choose a category)</p>
             <div class="row">
                 <div class="col-12 col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
-                    <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">History</a>
+                    <button href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns"></i>History</a>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">Geography</a>
+                    <button href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe"></i>Geography</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 mb-2">
-                    <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">Law and Society</a>
+                    <button href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced"></i>Law and Society</a>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">Sports and Culture</a>
+                    <button href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture"><i class="fa-solid fa-masks-theater"></i>Sports and Culture</a>
                 </div>
             </div>
         </div>
@@ -50,16 +50,18 @@
     <!-- Links to GitHub accounts changed manually and used copilot to write code -->
     <div class="footer">  
         <a href="https://github.com/tgrey2024" target="_blank">
-            <img src="assets/images/github_icon.png" alt="GitHub">
+            <i class="fa-brands fa-github" aria-label="Tripta's Github"></i>
         </a>
         <a href="https://github.com/tomokoelif" target="_blank">
-            <img src="assets/images/github_icon.png" alt="GitHub">
+            <i class="fa-brands fa-github" aria-label="Tomoko's Github"></i>
         </a>
         <a href="https://github.com/Carlos-n21" target="_blank">
-            <img src="assets/images/github_icon.png" alt="GitHub">
+            <i class="fa-brands fa-github" aria-label="Carlos' Github"></i>
         </a>
     </div>
-
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/28648f3889.js" crossorigin="anonymous"></script>
+    
     <!-- Link to Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
