@@ -249,7 +249,7 @@ The GitHub Copilot extension was installed in our local versions of Visual Studi
 Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages, Chrome DevTools AI Assistance panel was also used to explain the errors raised in the Console.
 
 #### Code Optimisation
-When coding more complicated logical constructs, e.g. a complex for loop to iterate through an array to generate elements in a Bootstrap grid, the basic structure of the grid without the loops was assigned to the innerHTML of the target element. Once tested, Copilot was prompted to improve on the code. Again, this needed to be tested fully before it was incorporated into the code.
+When coding more complicated logical constructs, e.g. a complex iteration to loop through an array to generate innerHTML elements in a Bootstrap grid, the basic structure of the grid without the loop was assigned to the innerHTML of the target element. Once tested to run correctly, Copilot was prompted to optimise on the code. It suggested using a map method to loop through the options array to build the HTML for each element, and join them all together as a string. Again, this needed to be tested fully before it was incorporated into the code. Running the resultant code produces the same result as before. 
 
 #### Impact on Workflow
 On the whole, it has been useful to pair programme with Copilot and use it for debugging and testing as we code. Due to the tight timescale of the hackathon, the team tried to use AI wherever possible to reduce development time, from creating user stories to suggesting commit messages. It was also able to explain selected code written by other team members with a concise and accurate summary. Occassionally it can be annoying when Copilot suggests code in ghost text unnecessarily, or introduces additional closing tags or brackets unnecessarily. Nonetheless, when used with specific prompts and context, some of the results provided by Copilot have been mostly usable, thus speeding up development. 
@@ -267,8 +267,9 @@ Copilot was used to help coding HTML, CSS style and JavaScript code as can be se
 - "Can you update the code to show categories buttons on top of each other on a mobile screen with space between them? And 2 on top and 2 above them with space between them? Categories buttons need to be light-blue with black text, all with same dimensions, please."
 
 ### Media References
-[Pexels.com](https://www.pexels.com/) for some of the images used in the quiz questions
-The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker). The logo and the photos have been edited and optimised using [Squoosh](https://squoosh.app/) or other similar applications.
+[Pexels.com](https://www.pexels.com/) for some of the images used in the quiz questions<br>
+Microsoft Copilot was used to generate some of the illustrations for the quiz questions<br>
+The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker). The logo and the photos have been edited and optimised using [Squoosh](https://squoosh.app/) or other similar applications.<br>
 Background image TBC
 [GIPHY](https://giphy.com/) for the animated gifs on the results page
 
