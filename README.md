@@ -1,5 +1,5 @@
 # JavaScript Group Hackathon Project <a id="top"/>
-![logo_transparentBG](https://github.com/user-attachments/assets/c3c43822-a751-47e5-be09-e2efc07dbe62)
+![logo](https://github.com/user-attachments/assets/4fcfabb7-0fce-4784-8f55-7b6fc3a2a68b)
 
 
 ## Introduction
@@ -18,6 +18,13 @@ Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/
     - [Typography](#typography)
     - [Imagery](#imagery)
 - [Website Features](#website-features)
+    - [Homepage](#homepage)
+    - [Rules modal](#rules-modal)
+    - [Categories Page](#categories-page)
+    - [Quiz Page](#quiz-page)
+    - [Results Page](#results-page)
+    - [Single Javascript Makes Multiple Pages](#single-javascript-makes-multiple-pages)
+    - [Question Bank](#question-bank)
     - [Footer](#footer)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
@@ -114,28 +121,31 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
   <img src="assets/images/london-eye-wide-2.jpg">
 
 ## Website Features
-- Homepage
+### Homepage
   <img src="assets/images/Play-button.png">
 
   <img src="assets/images/Rules-button.png">
 
-- Rules - modal
+### Rules modal
   <img src="assets/images/Rules-modal.png">
 
-- Categories, Quiz and Results Pages
+### Categories Page
   <img src="assets/images/categories-startgame.png">
  <img src="assets/images/home-button-categories.png">
-The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily.
+The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
 
-By clicking on the category button, users are taken to the Quiz. One question is displayed on the chosen category at a time, and users must choose one of the answer options before the Next button appears to take them to the next question. They can only attempt each question once in each round.
+### Quiz Page
+One question is displayed on the chosen category at a time, and users must choose one of the answer options before the Next button appears to take them to the next question. They can only attempt each question once in each round.
  
+### Results Page
 At the end of the round, which is currently set to 10 questions, users are given their scores: the total number of correct and incorrect answers they got, as well as the score as a percentage. In the actual Life in the UK exam, users are required to answer 24 questions and get at least 18 in order to pass, so the pass rate is 75%. By providing the score in this format, users can track their performance and focus on their weaker areas where necessary.
 
+### Single Javascript Makes Multiple Pages
 These three UI were initially built in HTML using CSS and Bootstrap Grids. The main javascript file script.js contains an event listener for the page load, and the content loaded is determined based on the ID in the body tag of the Categories and Quiz pages.
 
   <img src="">
 
-- Question Bank
+### External Question Bank
 Since there is currently no publicly available API to the Life in the UK test questions, we decided to use a question bank in our project. We implemented this as an additional Javascript file which contains 4 arrays of question Objects, one for each category. These are exported and imported into the main javascript file using ES6 version import/export.
 
 [Back to top](#top)
@@ -189,13 +199,13 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
 
-#### HTML Validation
+### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
-#### CSS Validation
+### CSS Validation
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 
-#### Lighthouse Audit
+### Lighthouse Audit
 
 ### Bugs yet to be Fixed
 - 
@@ -205,6 +215,25 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ## Credits
 ### Code References
 Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
+
+Other resources used as reference for the implementation:
+[How to add Icons to Buttons in Bootstrap 5 ?](https://www.geeksforgeeks.org/how-to-add-icons-to-buttons-in-bootstrap-5/)
+[Two Pages One Script](https://youtu.be/7_kaX07tVFc?si=SwNk5z7PHlPhtt9S) by [SteveGriffith-Prof3ssorSt3v3](https://www.youtube.com/@SteveGriffith-Prof3ssorSt3v3)
+
+### Use of AI
+#### Code Generation
+The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to e.g. variables that have not been declared or filepaths that do not exist.
+
+Copilot was also able to suggest higher-level implementation ideas when asked for ways to pass data between pages, and suggested reading on the use of local storage.
+
+#### Debugging
+Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages, Chrome DevTools AI Assistance panel was also used to explain the errors raised in the Console.
+
+#### Code Optimisation
+When coding more complicated logical constructs, e.g. a complex for loop to iterate through an array to generate elements in a Bootstrap grid, the basic structure of the grid without the loops was assigned to the innerHTML of the target element. Once tested, Copilot was prompted to improve on the code. Again, this needed to be tested fully before it was incorporated into the code.
+
+#### Impact on Workflow
+On the whole, it has been useful to pair programme with Copilot and use it for debugging and testing as we code. Due to the tight timescale of the hackathon, the team tried to use AI wherever possible to reduce development time, from creating user stories to suggesting commit messages. It was also able to explain selected code written by other team members with a concise and accurate summary. Occassionally it can be annoying when Copilot suggests code in ghost text unnecessarily, or introduces additional closing tags or brackets unnecessarily. Nonetheless, when used with specific prompts and context, some of the results provided by Copilot have been mostly usable, thus speeding up development. 
 
 ### Content References
 MS Copilot was used to generate some of the quiz questions and feedback content, which the team then reviewed and edited before including into the site.
