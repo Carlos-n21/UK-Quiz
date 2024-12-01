@@ -3,7 +3,7 @@
 
 
 ## Introduction
-The UK Quiz has been designed and implemented by our team of three as part of Hackathon 1 for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
+The UK Quiz has been designed and implemented by our team of three as part of Hackathon 1 for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.<br>
 Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/UK-Quiz/)
 
 ## Table of Contents
@@ -66,7 +66,12 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 On the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe, and we were limited to using the technologies we have learnt so far on the course so we couldn't include any requirements that needed a database backend.
 
 ### User Stories
-
+(Placeholde table, needs to be replaced with final user stories)
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
 
