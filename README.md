@@ -94,6 +94,8 @@ All user stories were logged on the [Kanban Project Board](https://github.com/us
 
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
+[Back to top](#top)
+
 ### Wireframes
 Initial layout of website:
 
@@ -106,6 +108,8 @@ Initial layout of website:
   
 - Desktop/Laptop view:<br>
   <img src="assets/images/desktop-home.png"> <img src="assets/images/desktop-categories.png"> <img src="assets/images/desktop-questions.png">
+
+[Back to top](#top)
 
 [Back to top](#top)
 
@@ -126,6 +130,8 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 ### Imagery
 - Background image<br>
   <img src="assets/images/london-eye-wide-2.jpg">
+
+[Back to top](#top)
 
 ## Website Features
 ### Homepage
