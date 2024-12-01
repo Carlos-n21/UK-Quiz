@@ -95,15 +95,17 @@ All user stories were logged on the [Kanban Project Board](https://github.com/us
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
 ### Wireframes
+Initial layout of website:
 
-- Mobile view:
-  <img src="">
+- Mobile view:<br>
+  <img src="assets/images/mobile-view.png">
+  <img src="assets/images/Correct-incorrect-answer-mobile-view.png">
   
-- Tablet view:
-  <img src="">
+- Tablet view:<br>
+  <img src="assets/images/Tablet-view-1.png"> <img src="assets/images/Tablet-view-2.png"> <img src="assets/images/Tablet-right-wrong-view.png">
   
-- Desktop/Laptop view:
-  <img src="">
+- Desktop/Laptop view:<br>
+  <img src="assets/images/desktop-home.png"> <img src="assets/images/desktop-categories.png"> <img src="assets/images/desktop-questions.png">
 
 [Back to top](#top)
 
