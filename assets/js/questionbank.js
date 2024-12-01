@@ -337,7 +337,7 @@ export const lawQuizQuestions = [
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "assets/images/questionbank/law3_pub.jpg",
+        imageURL: "assets/images/questionbank/law3_pub.png",
         imageAlt: "Illustration of a pub",
         incorrectFeedback: "Public Houses, also known as Pubs, usually open at 11:00 AM, 12:00 PM on Sundays."
     },
