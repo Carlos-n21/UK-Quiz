@@ -1,5 +1,5 @@
 # JavaScript Group Hackathon Project <a id="top"/>
-![logo_transparentBG](https://github.com/user-attachments/assets/c3c43822-a751-47e5-be09-e2efc07dbe62)
+![logo](https://github.com/user-attachments/assets/4fcfabb7-0fce-4784-8f55-7b6fc3a2a68b)
 
 
 ## Introduction
@@ -18,6 +18,13 @@ Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/
     - [Typography](#typography)
     - [Imagery](#imagery)
 - [Website Features](#website-features)
+    - [Homepage](#homepage)
+    - [Rules modal](#rules-modal)
+    - [Categories Page](#categories-page)
+    - [Quiz Page](#quiz-page)
+    - [Results Page](#results-page)
+    - [Single Javascript Makes Multiple Pages](#single-javascript-makes-multiple-pages)
+    - [Question Bank](#question-bank)
     - [Footer](#footer)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
@@ -25,6 +32,11 @@ Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Credits](#credits)
+    - [Code References](code-references)
+    - [Use of AI](use-of-ai)
+    - [Content References](content-references)
+    - [Media References](media-references)
+    - [Acknowledgements](acknowledgements)
 
 [Back to top](#top)
 
@@ -66,15 +78,21 @@ Wishes to be able to test her knowledge in different areas/subjects of the Life 
 On the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe, and we were limited to using the technologies we have learnt so far on the course so we couldn't include any requirements that needed a database backend.
 
 ### User Stories
-(Placeholde table, needs to be replaced with final user stories)
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
+| User Stories                                    | MoSCoW priority           |  Status |
+| ----------------------------------------------- |:-------------------------:| -------:|
+| Homepage                                        | must have                 |   Done  |
+| Choose Quiz by Category                         | must have                 |   Done  |
+| Show Quiz Question                              | must have                 |   WIP   |
+| Mark Answers and Give Feedback                  | must have                 |   Done  |
+| Show Score and Results                          | must have                 |   Done  |
+| Icons, logos and favicon                        | must have                 |   Done  |
+| Rules Modal                                     | should have               |   Done  |
+| Progress Indicator                              | should have               |   WIP   |
 
-This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
+All user stories were logged on the [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have.
 
+As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
 ### Wireframes
 
@@ -91,8 +109,12 @@ This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/
 
 ## Design
 ### Colour Scheme
-- Color palette used<br>
-  <img src="assets/images/color-palette.png">
+We took inspiration from the Union Jack and websites associated with the British identity, such as [official site for the Royal Family](https://www.royal.uk/). We also used prompts in Co-pilot and ChatGPT which recommended the following colours:
+![image](https://github.com/user-attachments/assets/4752782b-5b5c-42f6-a7ed-9b5652d06dbb)
+
+Based on these suggestions and using [Colorspace Color Palette Generator](https://mycolor.space/?hex=%2300247D&sub=1), we decided to use the following palettes:<br>
+![palette](https://github.com/user-attachments/assets/62e3c5f4-68fe-451b-80bf-92338f2bf05d)
+![image (1)](https://github.com/user-attachments/assets/1923c199-c886-4312-a689-68aeb24d1c3a)
 
 - Contrast check for correct and incorrect answer on quiz<br>
   <img src="assets/images/color-contrast-wrong-answer.png"> <img src="assets/images/green-color-contrast-rightanswer.png">
@@ -104,24 +126,32 @@ This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/
   <img src="assets/images/london-eye-wide-2.jpg">
 
 ## Website Features
-- Homepage
+### Homepage
   <img src="assets/images/Play-button.png">
 
   <img src="assets/images/Rules-button.png">
 
-- Rules - modal
+### Rules modal
   <img src="assets/images/Rules-modal.png">
 
-- Categories
+### Categories Page
   <img src="assets/images/categories-startgame.png">
+ <img src="assets/images/home-button-categories.png">
+The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
 
-  <img src="assets/images/home-button-categories.png">
+### Quiz Page
+One question is displayed on the chosen category at a time, and users must choose one of the answer options before the Next button appears to take them to the next question. They can only attempt each question once in each round.
+ 
+### Results Page
+At the end of the round, which is currently set to 10 questions, users are given their scores: the total number of correct and incorrect answers they got, as well as the score as a percentage. In the actual Life in the UK exam, users are required to answer 24 questions and get at least 18 in order to pass, so the pass rate is 75%. By providing the score in this format, users can track their performance and focus on their weaker areas where necessary.
 
-- Quiz page
+### Single Javascript Makes Multiple Pages
+These three UI were initially built in HTML using CSS and Bootstrap Grids. The main javascript file script.js contains an event listener for the page load, and the content loaded is determined based on the ID in the body tag of the Categories and Quiz pages.
+
   <img src="">
 
-- Results
-  <img src="">
+### External Question Bank
+Since there is currently no publicly available API to the Life in the UK test questions, we decided to use a question bank in our project. We implemented this as an additional Javascript file which contains 4 arrays of question Objects, one for each category. These are exported and imported into the main javascript file using ES6 version import/export.
 
 [Back to top](#top)
 
@@ -174,13 +204,15 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
 
-#### HTML Validation
+### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
-#### CSS Validation
+### CSS Validation
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 
-#### Lighthouse Audit
+### Lighthouse Audit
+
+### JSHint Linter
 
 ### Bugs yet to be Fixed
 - 
@@ -189,7 +221,24 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ## Credits
 ### Code References
-Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
+Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.<br>
+<br>
+Other resources used as reference for the implementation:<br>
+[How to add Icons to Buttons in Bootstrap 5 ?](https://www.geeksforgeeks.org/how-to-add-icons-to-buttons-in-bootstrap-5/)<br>
+[Two Pages One Script](https://youtu.be/7_kaX07tVFc?si=SwNk5z7PHlPhtt9S) by [SteveGriffith-Prof3ssorSt3v3](https://www.youtube.com/@SteveGriffith-Prof3ssorSt3v3)
+
+### Use of AI
+#### Code Generation
+The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to e.g. variables that have not been declared or filepaths that do not exist. Copilot was also able to suggest higher-level implementation ideas when asked for ways to pass data between pages, and suggested reading on the use of local storage.
+
+#### Debugging
+Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages, Chrome DevTools AI Assistance panel was also used to explain the errors raised in the Console.
+
+#### Code Optimisation
+When coding more complicated logical constructs, e.g. a complex for loop to iterate through an array to generate elements in a Bootstrap grid, the basic structure of the grid without the loops was assigned to the innerHTML of the target element. Once tested, Copilot was prompted to improve on the code. Again, this needed to be tested fully before it was incorporated into the code.
+
+#### Impact on Workflow
+On the whole, it has been useful to pair programme with Copilot and use it for debugging and testing as we code. Due to the tight timescale of the hackathon, the team tried to use AI wherever possible to reduce development time, from creating user stories to suggesting commit messages. It was also able to explain selected code written by other team members with a concise and accurate summary. Occassionally it can be annoying when Copilot suggests code in ghost text unnecessarily, or introduces additional closing tags or brackets unnecessarily. Nonetheless, when used with specific prompts and context, some of the results provided by Copilot have been mostly usable, thus speeding up development. 
 
 ### Content References
 MS Copilot was used to generate some of the quiz questions and feedback content, which the team then reviewed and edited before including into the site.
@@ -209,7 +258,7 @@ The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker
 Background image TBC
 [GIPHY](https://giphy.com/) for the animated gifs on the results page
 
-#### Acknowledgements
+### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
 Code Institute tutors (Dillon, Mark and Roo) for answering our questions
 
