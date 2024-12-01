@@ -11,6 +11,12 @@ body {
     margin: 0;
     flex-direction: column;
 }
+.logo {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .lead {
     font-size: 1.3rem;
@@ -76,7 +82,6 @@ i{
 .category-buttons .btn:hover {
     background-color: #a0d4f7; /* Change background color on hover */
     color: white; /* Change text color on hover */
-    border:#008fe5 1px solid;
 }
 
 
@@ -117,7 +122,6 @@ i{
 .changeable .button:hover {
     background-color: #a0d4f7; /* Change background color on hover */
     color: white; /* Change text color on hover */
-    border:#008fe5 1px solid;
 }
 
 /* Style for Home button */
@@ -133,7 +137,6 @@ i{
 #home:hover {
     background-color: #a0d4f7; /* Change background color on hover */
     color: #3c4a3f; /* Change text color on hover */
-    border:#008fe5 1px solid;
 }
 
 /* Style for game container */
@@ -142,7 +145,8 @@ i{
 }
 
 #optionSet button{
-    min-width: 15rem;
+    min-width: 10rem;
+    min-height: 4rem;
     cursor: pointer;
     margin-top: 1rem;
 }
@@ -162,11 +166,11 @@ i{
 /* Style for feedback text */
 #feedback {
     min-height: 3.2rem;
-    padding: 0 3rem;
+    padding: 0;
     width: 100%
     font-size: 1rem;
     margin-top: 0.8rem;
-    text-align: left;
+    text-align: center;
 }
 
 #questionCounter {
