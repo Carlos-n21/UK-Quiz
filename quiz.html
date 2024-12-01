@@ -21,13 +21,18 @@
 </head>
 <body id="quiz">
     <main>
-    <div class="container" id="quiz-container">
-        <h1>
-            <img src="assets/images/logo.png" alt="Website logo" id="img-logo">
-        </h1>
+        <div class="container custom-container changeable">
+            <div id="logo" class="row">
+                <div class="col-12 mb-2 justify-content-center">
+                    <a href="index.html">
+                    <img src="assets/images/logo_small.webp" alt="Website logo" id="img-logo" class="d-block d-md-none logo mx-auto">
+                    <img src="assets/images/logo.webp" alt="Website logo" id="img-logo-large" class="d-none d-md-block logo">
+                    </a>
+                </div>
+            </div>
     <div id="questionArea">
         <h3><span class="questionNum"></span></h3>
-        <p class="h3" id="questionText"></p>
+        <p class="lead mt-2" id="questionText"></p>
         <img id=questionImage src="" alt="">
         <div id="optionSet" my-3></div>
         <div id="feedback"></div>

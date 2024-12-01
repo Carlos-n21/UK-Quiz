@@ -77,7 +77,7 @@ let answer = "";
            score = 0;
            totalAnswered = 0;
            // set quizLength to number of questions per round
-           quizLength = 40;
+           quizLength = 10;
        });
     }
     },
@@ -115,17 +115,17 @@ let answer = "";
     
 };
 // function to assign quizQuestions array based on chosen category
-function fetchQuestionSet(chosenCategory){
+function fetchQuestionSet(chosenCategory) {
     if (chosenCategory === "history") {
-        questionSet = historyQuizQuestions;
+        questionSet = historyQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "geography") {
-        questionSet = geographyQuizQuestions;
+        questionSet = geographyQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "law") {
-        questionSet = lawQuizQuestions;
+        questionSet = lawQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "culture") {
-        questionSet = cultureQuizQuestions;
+        questionSet = cultureQuizQuestions.slice(0, quizLength);
     }
-    console.log("fetchQuestionSet: assigned questions "+questionSet[0].question);
+    console.log("fetchQuestionSet: assigned questions " + questionSet.length);
     return questionSet;
 }
 
@@ -152,7 +152,7 @@ function hideNextButton(){
 
 // displays the next question
 function nextQuestion(){
-    if (totalAnswered < quizLength-2) {
+    if (totalAnswered < quizLength) {
         qnum++;
        updateQuiz(questionSet);
         feedbackElement.innerText = "";
@@ -174,7 +174,6 @@ function updateQuiz(questionSet) {
     console.log("start updateQuiz: assigned questions " + questionSet[qnum].question);
     // add question number (= qnum index+1) to Quiz page
     let questionCounterElement = document.querySelector('#questionCounter');
-    console.log("bodyid " + document.body.id);
     let questionNumber = parseInt(qnum + 1);
     questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>`;
     hideNextButton();
@@ -185,7 +184,7 @@ function updateQuiz(questionSet) {
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
     imageElement.alt = questionSet[qnum].imageAlt;
-    imageElement.width = "450"; //move width setting to css
+    imageElement.width = "200"; //move width setting to css
     // add answer options to Quiz page
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
@@ -332,19 +331,19 @@ function showResults(){
     resultsElement.innerHTML = `<h2>Results</h2>
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 mb-2">
-            <h5>Correct: ${correctNum}; incorrect: ${incorrectNum}. Your score is ${score}%.</h5>
-            <h5 class="results-text">"${comment}</h5>
+            <p class="lead">Correct: ${correctNum}; incorrect: ${incorrectNum}. Your score is ${score}%.</p>
+            <p class="lead results-text">${comment}</p>
         </div>
         <div class="col-12 col-md-6"><div class="giphy-embed" style="position:relative; padding-bottom:56%;"><iframe src="${animgifURL}" width="90%" height="90%" style="position:absolute; left:1rem;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><h6><a href="${gifURL}" alt="${gifAlt}" target="_blank">via GIPHY</a></h6></div></div>    
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="categories.html" class="btn btn-primary btn-block">Play Again</a>
+                <a href="categories.html" class="btn btn-outline-secondary btn-block">Play Again</a>
             </div>
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="index.html" class="btn btn-primary btn-block">Home</a>
+                <a href="index.html" class="btn btn-outline-secondary btn-block">Home</a>
             </div>
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="categories.html" class="btn btn-primary btn-block">Categories</a>
+                <a href="categories.html" class="btn btn-outline-secondary btn-block">Categories</a>
             </div>
         </div>
     </div>
