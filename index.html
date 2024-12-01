@@ -82,13 +82,21 @@
 </head>
 
 <body>
+    <main>
     <div class="container custom-container changeable">
-        <h1>
-            <img src="assets/images/logo.png" alt="Website logo" id="img-logo">
-        </h1>
-        <p class="lead">The most efficient way to practise for your Life in the UK exam</p>
+        <div id="logo" class="row">
+            <div class="col-12 mb-2 justify-content-center">
+                <a href="#">
+                <img src="assets/images/logo_small.webp" alt="Website logo" id="img-logo" class="d-block d-md-none logo mx-auto">
+                <img src="assets/images/logo.webp" alt="Website logo" id="img-logo-large" class="d-none d-md-block logo">
+                </a>
+            </div>
+        </div>
+        <div class="col-12 mb-2 justify-content-md-center d-none d-md-block">
+            <p class="lead">The most efficient way to practise for your Life in the UK exam</p>
+        </div>
         <a href="categories.html"><button class="button"><i class="fa-regular fa-circle-play"></i>Play</button></a>
-        <button href="#" class="button" id="rules-btn"><i class="fa-solid fa-book-open"></i>Rules</button>
+        <button class="button" id="rules-btn"><i class="fa-solid fa-book-open"></i>Rules</button>
     </div>
 
     <!-- Modal -->
@@ -108,7 +116,7 @@
             <p class="luck">Good luck and have fun!</p>
         </div>
     </div>
-
+    </main>
     <div class="footer">  
         <a href="https://github.com/tgrey2024" target="_blank">
             <i class="fa-brands fa-github" aria-label="Tripta's Github"></i>

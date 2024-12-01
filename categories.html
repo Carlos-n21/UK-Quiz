@@ -20,27 +20,32 @@
      
 </head>
 <body id="categories">
-    <div id="categories" class="container changeable">
-        <h1>
-            <img src="assets/images/logo.png" alt="Website logo" id="img-logo">
-        </h1>
+    <div class="container custom-container changeable">
+        <div id="logo" class="row">
+            <div class="col-12 mb-2 justify-content-center">
+                <a href="index.html">
+                <img src="assets/images/logo_small.webp" alt="Website logo" id="img-logo" class="d-block d-md-none logo mx-auto">
+                <img src="assets/images/logo.webp" alt="Website logo" id="img-logo-large" class="d-none d-md-block logo">
+                </a>
+            </div>
+        </div>
         <div id="buttonArea" class="category-buttons">
             <h3>Categories</h3>
             <p>(Choose a category)</p>
             <div class="row">
                 <div class="col-12 col-md-6 mb-2">  <!-- Bootstrap grid system used to create two columns, used Copilot -->
-                    <button href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns"></i>History</a>
+                    <button href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns btn"></i>History</a>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <button href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe"></i>Geography</a>
+                    <button href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe btn"></i>Geography</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 mb-2">
-                    <button href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced"></i>Law and Society</a>
+                    <button href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced btn"></i>Law and Society</a>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <button href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture"><i class="fa-solid fa-masks-theater"></i>Sports and Culture</a>
+                    <button href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture"><i class="fa-solid fa-masks-theater btn"></i>Sports and Culture</a>
                 </div>
             </div>
         </div>
