@@ -77,7 +77,7 @@ let answer = "";
            score = 0;
            totalAnswered = 0;
            // set quizLength to number of questions per round
-           quizLength = 40;
+           quizLength = 10;
        });
     }
     },
@@ -115,17 +115,17 @@ let answer = "";
     
 };
 // function to assign quizQuestions array based on chosen category
-function fetchQuestionSet(chosenCategory){
+function fetchQuestionSet(chosenCategory) {
     if (chosenCategory === "history") {
-        questionSet = historyQuizQuestions;
+        questionSet = historyQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "geography") {
-        questionSet = geographyQuizQuestions;
+        questionSet = geographyQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "law") {
-        questionSet = lawQuizQuestions;
+        questionSet = lawQuizQuestions.slice(0, quizLength);
     } else if (chosenCategory === "culture") {
-        questionSet = cultureQuizQuestions;
+        questionSet = cultureQuizQuestions.slice(0, quizLength);
     }
-    console.log("fetchQuestionSet: assigned questions "+questionSet[0].question);
+    console.log("fetchQuestionSet: assigned questions " + questionSet.length);
     return questionSet;
 }
 
@@ -152,7 +152,7 @@ function hideNextButton(){
 
 // displays the next question
 function nextQuestion(){
-    if (totalAnswered < quizLength-2) {
+    if (totalAnswered < quizLength) {
         qnum++;
        updateQuiz(questionSet);
         feedbackElement.innerText = "";
