@@ -94,6 +94,8 @@ All user stories were logged on the [Kanban Project Board](https://github.com/us
 
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
+[Back to top](#top)
+
 ### Wireframes
 Initial layout of website:
 
@@ -106,6 +108,8 @@ Initial layout of website:
   
 - Desktop/Laptop view:<br>
   <img src="assets/images/desktop-home.png"> <img src="assets/images/desktop-categories.png"> <img src="assets/images/desktop-questions.png">
+
+[Back to top](#top)
 
 [Back to top](#top)
 
@@ -127,21 +131,29 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 - Background image<br>
   <img src="assets/images/london-eye-wide-2.jpg">
 
+[Back to top](#top)
+
 ## Website Features
 ### Homepage
-  <img src="assets/images/Play-button.png">
+  <img src="assets/images/homepage-view.png">
 
-  <img src="assets/images/Rules-button.png">
+The Homepage has 2 buttons, "Play" that takes the user to the Categories page.
+And Rules, which will open the modal explaining hot to play/do the quiz.
 
 ### Rules modal
-  <img src="assets/images/Rules-modal.png">
+  <img src="assets/images/Rules-modal-1.png">
+
+This modal shows how to use the site and can be closed by clicking/selecting the "x" on the top-right side of the modal or clicking/selecting any area of the webpage outside the modal area.
 
 ### Categories Page
   <img src="assets/images/categories-startgame.png">
- <img src="assets/images/home-button-categories.png">
+  <img src="assets/images/home-button-categories.png">
+
 The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
 
 ### Quiz Page
+  <img src="assets/images/Question-view-1.png">
+
 One question is displayed on the chosen category at a time, and users must choose one of the answer options before the Next button appears to take them to the next question. They can only attempt each question once in each round.
  
 ### Results Page
