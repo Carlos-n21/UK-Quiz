@@ -12,16 +12,29 @@ body {
     flex-direction: column;
 }
 
+.lead {
+    font-size: 1.3rem;
+    margin-top: -0.8rem;
+    margin-bottom: 3rem;
+}
+
 .container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 50px;
     border-radius: 10px;
     text-align: center;
+    min-height: 38vh;
+
+}
+
+.changeable a {
+    text-decoration: none;
+    color: #3c4a3f;
 }
 
 /* custom style for index.html container */
 .custom-container {
-    max-width: 500px; /* Adjust the width as needed */
+    max-width: 70vw; /* Adjusted max-width to 70vw */
     margin: 0 auto; /* Center the container */
 }
 
@@ -38,6 +51,13 @@ body {
     margin: 20px 0;
 }
 
+i{
+    font-size: 2rem;
+    color: #3c4a3f;
+    padding-right:2rem;
+    padding-left:2rem;
+}
+
 /* Style for categories buttons */
 .category-buttons .btn {
     flex: 1 1 calc(45% - 20px); /* Adjusted flex-basis to reduce button width */
@@ -45,7 +65,7 @@ body {
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #3c4a3f;
     background-color: #b6e3fd;
     border: none;
     border-radius: 5px;
@@ -53,22 +73,37 @@ body {
     margin: 10px; /* Added margin to increase space between buttons */
 }
 
-.category-buttons a {
+.category-buttons .btn:hover {
+    background-color: #a0d4f7; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    border:#008fe5 1px solid;
+}
+
+
+
+.category-buttons button {
     flex: 1;
     margin: 0 10px;
 }
 
 .category-buttons i {
     min-width: auto;
+    padding-right:1.6rem;
+    font-size: larger;
+
+}
+
+.category-buttons i:hover {
+    color: white; /* Change text color on hover */
 }
 
 /* Style for Play and Rules buttons */
-.container .button {
+.changeable .button {
     display: block;
     width: 100%;
     margin: 10px -10px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 2rem;
     font-family: 'Arial', sans-serif;
     text-align: center;
     text-decoration: none;
@@ -79,8 +114,14 @@ body {
     cursor: pointer;
 }
 
+.changeable .button:hover {
+    background-color: #a0d4f7; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    border:#008fe5 1px solid;
+}
+
 /* Style for Home button */
-.container #home {
+.changeable #home {
     width: 20%;
     padding: 5px 10px;
     font-size: 14px;
@@ -89,19 +130,27 @@ body {
     border: black 1px solid;
 }
 
+#home:hover {
+    background-color: #a0d4f7; /* Change background color on hover */
+    color: #3c4a3f; /* Change text color on hover */
+    border:#008fe5 1px solid;
+}
+
 /* Style for game container */
 #quiz-container {
     min-height: 45vh;
 }
-/* Style to hide prevButton onLoad */
-#prevButton {
-    
+
+#optionSet button{
+    min-width: 15rem;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 /* Style to hide nextButton onLoad */
 #nextButton i {
-    display: inline;
-    width: 5rem;
+    display: none;
+    font-size: 2rem;
     color: #008fe5;
 }
 
@@ -112,8 +161,8 @@ body {
 
 /* Style for feedback text */
 #feedback {
-    min-height: 4rem;
-    padding: 0 5rem;
+    min-height: 3.2rem;
+    padding: 0 3rem;
     width: 100%
     font-size: 1rem;
     margin-top: 0.8rem;
@@ -126,6 +175,12 @@ body {
     display:inline-block;
 }
 
+.btn-success {
+    background-color: #206537;
+    color: white;
+    cursor: pointer;
+}
+
 /* bottom margin manually changed botton property from Copilot code 
 as not starting straight from bottom of the page */
 .footer {
@@ -134,7 +189,8 @@ as not starting straight from bottom of the page */
     bottom: 0;
     text-align: center;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
+    height: 4vh;
 }
 
 .footer a {
@@ -142,9 +198,10 @@ as not starting straight from bottom of the page */
 }
 
 /* icons provided to Copilot when asked to help with coding */ 
-.footer img {
-    width: 32px;
-    height: 32px;
+.footer i{
+    font-size: 1.8rem;
+    color: #3c4a3f;
+    padding:1rem;
 }
 
 /* Media query for smaller screens */

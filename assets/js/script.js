@@ -132,10 +132,19 @@ function fetchQuestionSet(chosenCategory){
 
 // show next button
 function showNextButton(){
-    let nextButton = document.getElementById('nextButton');
+    let nextButton = document.querySelector('#nextButton i');
     if (nextButton) {
-        console.log(nextButton);
-        nextButton.style.visibility = "visible";
+        nextButton.style.display = "inline";
+    } else {
+        console.error("showNextButton: nextButton element not found");
+    }
+}
+
+// hide next button
+function hideNextButton(){
+    let nextButton = document.querySelector('#nextButton i');
+    if (nextButton) {
+        nextButton.style.display = "none";
     } else {
         console.error("showNextButton: nextButton element not found");
     }
@@ -168,6 +177,7 @@ function updateQuiz(questionSet) {
     console.log("bodyid " + document.body.id);
     let questionNumber = parseInt(qnum + 1);
     questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>`;
+    hideNextButton();
     // add question text to Quiz page
     let questionTextElement = document.getElementById('questionText');
     questionTextElement.innerText = questionSet[qnum].question;
