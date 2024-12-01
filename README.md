@@ -3,7 +3,7 @@
 
 
 ## Introduction
-
+The UK Quiz has been designed and implemented by our team of three as part of Hackathon 1 for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
 Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/UK-Quiz/)
 
 ## Table of Contents
@@ -29,18 +29,15 @@ Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/
 [Back to top](#top)
 
 ## User Experience Design
-
-<img src="assets/images/UK-Quizz-responsive-image.png" alt="Website view on devices with different sizes">
+A user-centred approach has been taken through the inception, design and development of this site.
 
 ### Project Brief
 The project goal is to provide a tool for users that wish to be UK citizens, which involves taking a quiz about Life in the UK as part of their assessment to get citizenship.
 
-The site user's goals are to provide a short quiz about Life in the UK, with different categories available for the user to test their knowledge and practice for the formal test.
-Allowing the user to have feedback throughout the quiz about their answers and also in the end to let them know their score.
-Also providing a quick and efficient way for the user to test their knowledge on the go or during a short break.git add
+The site user's goals are to provide a short quiz for new arrivals to the UK to prepare for the "Life in the UK" Citizenship exam, by providing different categories for the user to test their knowledge and practice for the formal test, giving users useful feedback throughout the quiz on their answers and giving them a score at the end of each quiz. We envisage this site to be a quick and efficient way for the user to test their knowledge on the go or during a short break.
 
 ### Users
-
+In order to fully understand our users' needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
 - Persona 1: "Sophie – The Student"<br>
 Sophie Li, 24 years old, international university student that recently finished her degree in the UK. Needs to pass the Life in the UK test to be able to stay and work in the UK.<br>
 Looking to find an engaging and interactive way to study for the citizenship test whilst balancing study with her academic workload, in an effective way, which can be hard to do and also trying to avoid burnout.<br>
@@ -50,7 +47,7 @@ Wishes to do the quiz and practice for the test between classes and her study br
 
 - Persona 2: "Ali – The Busy Professional"<br>
 Ali Ahmed, 40 years, IT Manager, has been living in the UK for 5 years and needs to pass the Life in the UK test to apply for British citizenship.<br>
-Aims to efficiently prepare for the test alongside a busy work     schedule.<br>
+Aims to efficiently prepare for the test alongside a busy work schedule.<br>
 Wants to find resources that look straightforward and time-efficient, so that he can practice for the test.<br>
 Has no problems using different technologies to study and prefers to do this on his tablet during his commute or at home on the desktop.<br>
 Finds it difficult to find a high-quality, time-efficient study tool that can be adapted to his work schedule and family time, whilst keeping him motivated.<br>
@@ -66,9 +63,12 @@ Also needs to get feedback about her choices for each question, if right/wrong, 
 Wishes to be able to test her knowledge in different areas/subjects of the Life in the UK.
 
 ## Project Plan
-[Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
+On the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe, and we were limited to using the technologies we have learnt so far on the course so we couldn't include any requirements that needed a database backend.
 
 ### User Stories
+
+
+This is our [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo
 
 
 ### Wireframes
