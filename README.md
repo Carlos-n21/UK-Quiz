@@ -32,6 +32,11 @@ Live site: [https://carlos-n21.github.io/UK-Quiz/](https://carlos-n21.github.io/
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Credits](#credits)
+    - [Code References](code-references)
+    - [Use of AI](use-of-ai)
+    - [Content References](content-references)
+    - [Media References](media-references)
+    - [Acknowledgements](acknowledgements)
 
 [Back to top](#top)
 
@@ -207,6 +212,8 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### Lighthouse Audit
 
+### JSHint Linter
+
 ### Bugs yet to be Fixed
 - 
 
@@ -214,17 +221,15 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ## Credits
 ### Code References
-Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
-
-Other resources used as reference for the implementation:
-[How to add Icons to Buttons in Bootstrap 5 ?](https://www.geeksforgeeks.org/how-to-add-icons-to-buttons-in-bootstrap-5/)
+Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.<br>
+<br>
+Other resources used as reference for the implementation:<br>
+[How to add Icons to Buttons in Bootstrap 5 ?](https://www.geeksforgeeks.org/how-to-add-icons-to-buttons-in-bootstrap-5/)<br>
 [Two Pages One Script](https://youtu.be/7_kaX07tVFc?si=SwNk5z7PHlPhtt9S) by [SteveGriffith-Prof3ssorSt3v3](https://www.youtube.com/@SteveGriffith-Prof3ssorSt3v3)
 
 ### Use of AI
 #### Code Generation
-The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to e.g. variables that have not been declared or filepaths that do not exist.
-
-Copilot was also able to suggest higher-level implementation ideas when asked for ways to pass data between pages, and suggested reading on the use of local storage.
+The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to e.g. variables that have not been declared or filepaths that do not exist. Copilot was also able to suggest higher-level implementation ideas when asked for ways to pass data between pages, and suggested reading on the use of local storage.
 
 #### Debugging
 Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages, Chrome DevTools AI Assistance panel was also used to explain the errors raised in the Console.
@@ -253,7 +258,7 @@ The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker
 Background image TBC
 [GIPHY](https://giphy.com/) for the animated gifs on the results page
 
-#### Acknowledgements
+### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
 Code Institute tutors (Dillon, Mark and Roo) for answering our questions
 
