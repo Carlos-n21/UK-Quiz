@@ -111,7 +111,7 @@ Initial layout of website:
   <img src="assets/images/Tablet-view-1.png"> <img src="assets/images/Tablet-view-2.png"> <img src="assets/images/Tablet-right-wrong-view.png">
   
 - Desktop/Laptop view:<br>
-  <img src="assets/images/desktop-home.png"> <img src="assets/images/desktop-categories.png"> <img src="assets/images/desktop-questions.png">
+  <img src="assets/images/desktop-home.png"> <img src="assets/images/desktop-categories.png"> <img src="assets/images/desktop-cORRECT.png"> <img src="assets/images/desktop-results.png">
 
 [Back to top](#top)
 
