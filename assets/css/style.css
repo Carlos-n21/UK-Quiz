@@ -40,7 +40,7 @@ body {
 
 /* custom style for index.html container */
 .custom-container {
-    max-width: 66vw; /* Adjusted max-width to 70vw */
+    max-width: 66vw; /* Adjusted max-width */
     margin: 0 auto; /* Center the container */
 }
 
@@ -214,7 +214,7 @@ as not starting straight from bottom of the page */
     text-align: center;
     width: 100%;
     opacity: 0.8;
-    height: 6vh;
+    height: 4vh;  /* Adjusted height to get footer shorter */
 }
 
 .footer a {
@@ -225,7 +225,7 @@ as not starting straight from bottom of the page */
 .footer i{
     font-size: 1.8rem;
     color: #3c4a3f;
-    padding:1rem;
+    padding:0.2rem;  /* Adjusted padding to make icons more visible */
 }
 
 /* Media query for smaller screens */

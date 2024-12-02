@@ -219,17 +219,23 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
 ### CSS Validation
+
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.<br>
 ![CSS_validation](https://github.com/user-attachments/assets/39ea1cd2-35b6-44c8-8295-44f62ae4d6b7)
+
 
 ### Lighthouse Audit
 
 ### JSHint Linter
+
 - Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.<br>
 ![JSHint](https://github.com/user-attachments/assets/a290be47-4e96-4cf7-8c25-8bb1f16ff463)
 
+
 ### Bugs yet to be Fixed
-- 
+- Some buttons like the "Play Again" button with different shape on the results.
+- Footer and icons showing well on Chrome browser but not showing the full icons logo on Firefox.
+- Home button had to be taken off, has format/style changing in different pages (eg: categories and results")
 
 [Back to top](#top)
 
