@@ -84,8 +84,11 @@ Here are all the user stories that have been prioritised (all must have and some
 | Homepage                                        | must have                 |   Done  |
 | Choose Quiz by Category                         | must have                 |   Done  |
 | Show Quiz Question                              | must have                 |   Done  |
+| Score Calculation                               | must have                 |   Done  |
+| Responsive Design                               | must have                 |   Done  |
 | Mark Answers and Give Feedback                  | must have                 |   Done  |
 | Show Score and Results                          | must have                 |   Done  |
+| Accessibility Features                          | must have                 |   Done  |
 | Icons, logos and favicon                        | must have                 |   Done  |
 | Rules Modal                                     | should have               |   Done  |
 | Progress Indicator                              | should have               |   Done  |
