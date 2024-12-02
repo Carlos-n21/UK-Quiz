@@ -83,12 +83,13 @@ Here are all the user stories that have been prioritised (all must have and some
 | ----------------------------------------------- |:-------------------------:| -------:|
 | Homepage                                        | must have                 |   Done  |
 | Choose Quiz by Category                         | must have                 |   Done  |
-| Show Quiz Question                              | must have                 |   WIP   |
+| Show Quiz Question                              | must have                 |   Done  |
 | Mark Answers and Give Feedback                  | must have                 |   Done  |
 | Show Score and Results                          | must have                 |   Done  |
 | Icons, logos and favicon                        | must have                 |   Done  |
 | Rules Modal                                     | should have               |   Done  |
-| Progress Indicator                              | should have               |   WIP   |
+| Progress Indicator                              | should have               |   Done  |
+| Random Question                                 | should have               |   Done  |
 
 All user stories were logged on the [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have.
 
@@ -219,10 +220,14 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### CSS Validation
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+![CSS_validation](https://github.com/user-attachments/assets/39ea1cd2-35b6-44c8-8295-44f62ae4d6b7)
+
 
 ### Lighthouse Audit
 
 ### JSHint Linter
+- Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.
+![JSHint](https://github.com/user-attachments/assets/8bba78ec-5d06-4b3f-9e26-092da0d0de29)
 
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
