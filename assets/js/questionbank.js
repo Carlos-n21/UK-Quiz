@@ -9,7 +9,7 @@ export let quizQuestions = [
             d: "Kings can collect taxes"
         },
         correctAnswer: "b",
-        category: "law",
+        category: "history",
         imageURL: "assets/images/questionbank/history1_billOfRight.png",
         imageAlt: "Bill of Rights",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
