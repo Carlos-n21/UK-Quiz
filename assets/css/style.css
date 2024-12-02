@@ -186,6 +186,10 @@ i{
     display:inline-block;
 }
 
+#questionImage{
+    max-width: 300px;
+}
+
 .btn-success {
     background-color: #206537;
     color: white;
