@@ -165,7 +165,7 @@ i{
 
 /* Style for feedback text */
 #feedback {
-    height: 3rem;
+    min-height: 3rem;
     padding: 0;
     width: 100%;
     font-size: 1rem;
@@ -183,6 +183,11 @@ i{
     margin: 20px 0;
 }
 
+.feedbackBtn {
+    width: 10rem;
+    display: block;
+    margin: 0 auto; /* Center align the button */
+}
 
 #questionCounter {
     font-size: 1.5rem;

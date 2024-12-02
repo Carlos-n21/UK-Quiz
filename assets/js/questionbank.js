@@ -471,7 +471,7 @@ export let quizQuestions = [
             c: "Sake Dean Mahomet",
             d: "James Cook"
         },
-        correctAnswer: "a",
+        correctAnswer: "d",
         category: "culture",
         imageURL: "assets/images/questionbank/culture4_australia.jpg",
         imageAlt: "Map of Australia",
