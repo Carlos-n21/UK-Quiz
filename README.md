@@ -147,11 +147,16 @@ And Rules, which will open the modal explaining hot to play/do the quiz.
 
 This modal shows how to use the site and can be closed by clicking/selecting the "x" on the top-right side of the modal or clicking/selecting any area of the webpage outside the modal area.
 
+### Footer
+  <img src="assets/images/footer.png">
+
+The footer contains 3 GitHUb icons for each of the members of the group, that can be accessed by clicking/selecting each of them. Will open a new page for the GitHub account.
+
 ### Categories Page
   <img src="assets/images/categories-startgame.png">
-  <img src="assets/images/home-button-categories.png">
 
 The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
+If a user needs to go back to the homepage, he/she can select/click on the title to be redirected.
 
 ### Quiz Page
   <img src="assets/images/Question-view-1.png">
@@ -220,19 +225,21 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
 ### CSS Validation
+
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 ![CSS_validation](https://github.com/user-attachments/assets/367ad92f-280d-4632-8f4a-f6b14cc4145d)
-
 
 
 ### Lighthouse Audit
 
 ### JSHint Linter
+
 - Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.<br>
 script.js
 ![JSHint](https://github.com/user-attachments/assets/3e68e3c4-361e-4754-b6b1-ba234d61937d)<br>
 questionbank.js
 ![jshint_questionbank](https://github.com/user-attachments/assets/fd6cad21-3b68-45d5-8238-9e69bba65291)
+
 
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
