@@ -10,7 +10,7 @@ export let quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "assets/images/questionbank/history1_billOfRight.png",
+        imageURL: "assets/images/questionbank/history1_billOfRight.jpg",
         imageAlt: "Bill of Rights",
         incorrectFeedback: "The Bill of Rights, 1689, confirmed the rights of Parliament and the limits of the king's power."
     },
@@ -52,7 +52,7 @@ export let quizQuestions = [
         },
         correctAnswer: "d",
         category: "history",
-        imageURL: "assets/images/questionbank/history4_bronzeAge.png",
+        imageURL: "assets/images/questionbank/history4_bronzeAge.jpg",
         imageAlt: "Bronze Age burial site",
         incorrectFeedback: "People lived in roundhouses and buried their dead in tombs called round barrows."
     },
@@ -94,7 +94,7 @@ export let quizQuestions = [
         },
         correctAnswer: "c",
         category: "history",
-        imageURL: "assets/images/questionbank/history7_royal.png",
+        imageURL: "assets/images/questionbank/history7_royal.jpg",
         imageAlt: "Queen Elizabeth I",
         incorrectFeedback: "Queen Elizabeth I became one of the most popular monarchs in English history, particularly after 1588, when the English defeated the Spanish Armada."
     },
@@ -333,7 +333,7 @@ export let quizQuestions = [
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "assets/images/questionbank/law3_pub.png",
+        imageURL: "assets/images/questionbank/law3_pub.jpg",
         imageAlt: "Illustration of a pub",
         incorrectFeedback: "Public Houses, also known as Pubs, usually open at 11:00 AM, 12:00 PM on Sundays."
     },
@@ -361,7 +361,7 @@ export let quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "assets/images/questionbank/law5_monarch.png",
+        imageURL: "assets/images/questionbank/law5_monarch.jpg",
         imageAlt: "Illustration of a monarch",
         incorrectFeedback: "The Monarch has important ceremonial roles, such as the opening of the new parliamentary session each year."
     },
@@ -389,7 +389,7 @@ export let quizQuestions = [
         },
         correctAnswer: "d",
         category: "law",
-        imageURL: "assets/images/questionbank/law7_election.png",
+        imageURL: "assets/images/questionbank/law7_election.jpg",
         imageAlt: "Voters at an election",
         incorrectFeedback: "MPs are elected at a General Election, which is held at least every five years."
     },
@@ -431,7 +431,7 @@ export let quizQuestions = [
         },
         correctAnswer: "b",
         category: "law",
-        imageURL: "assets/images/questionbank/law10_children.png",
+        imageURL: "assets/images/questionbank/law10_children.jpg",
         imageAlt: "Children at a playground",
         incorrectFeedback: "The National Society for the Prevention of Cruelty to Children (NSPCC) works with children."
     },
@@ -501,7 +501,7 @@ export let quizQuestions = [
         },
         correctAnswer: "a",
         category: "culture",
-        imageURL: "assets/images/questionbank/culture5_www.png",
+        imageURL: "assets/images/questionbank/culture5_www.jpg",
         imageAlt: "World Wide Web",
         incorrectFeedback: "World Wide Web was invented by Sir Tim Berners-Lee (1955-) who is British. Information was successfully transferred via the web for the first time on 25 December 1990."
     },
@@ -529,7 +529,7 @@ export let quizQuestions = [
         },
         correctAnswer: "c",
         category: "culture",
-        imageURL: "assets/images/questionbank/culture7_olympic.png",
+        imageURL: "assets/images/questionbank/culture7_olympic.jpg",
         imageAlt: "Olympic Games medal",
         incorrectFeedback: "Dame Kelly Holmes (1970-) won two gold medals for running in the 2004 Olympic Games."
     },
@@ -557,7 +557,7 @@ export let quizQuestions = [
         },
         correctAnswer: "d",
         category: "culture",
-        imageURL: "assets/images/questionbank/culture9_ironAge.png",
+        imageURL: "assets/images/questionbank/culture9_ironAge.jpg",
         imageAlt: "Iron Age people",
         incorrectFeedback: "Their language was part of the Celtic language family."
     },
