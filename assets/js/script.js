@@ -108,7 +108,8 @@ const app = {
 // function to assign quizQuestions array based on chosen category
 function fetchQuestionSet(chosenCategory) {
     let filteredQuestions = quizQuestions.filter(question => question.category === chosenCategory);
-    return shuffleArray(filteredQuestions).slice(0, quizLength);
+//    return shuffleArray(filteredQuestions).slice(0, quizLength);
+   return filteredQuestions;
 }
 
 // function to use Fisher-Yates shuffle to shuffle quizQuestions array
