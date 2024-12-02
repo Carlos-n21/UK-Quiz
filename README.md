@@ -84,8 +84,11 @@ Here are all the user stories that have been prioritised (all must have and some
 | Homepage                                        | must have                 |   Done  |
 | Choose Quiz by Category                         | must have                 |   Done  |
 | Show Quiz Question                              | must have                 |   Done  |
+| Score Calculation                               | must have                 |   Done  |
+| Responsive Design                               | must have                 |   Done  |
 | Mark Answers and Give Feedback                  | must have                 |   Done  |
 | Show Score and Results                          | must have                 |   Done  |
+| Accessibility Features                          | must have                 |   Done  |
 | Icons, logos and favicon                        | must have                 |   Done  |
 | Rules Modal                                     | should have               |   Done  |
 | Progress Indicator                              | should have               |   Done  |
@@ -127,6 +130,8 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 ### Typography
 Initial website font-family was Times New Roman, which was changed to "Arial, open sans" for better reading, showing smoother lines.
 Not imported from Google Fonts, used as suggestion from COpilot whilst coding on style.css
+![Open Sans](https://github.com/user-attachments/assets/62d85219-c118-44df-87bd-6e5edc208a29)
+
 
 ### Imagery
 - Background image<br>
@@ -167,8 +172,7 @@ At the end of the round, which is currently set to 10 questions, users are given
 
 ### Single Javascript Makes Multiple Pages
 These three UI were initially built in HTML using CSS and Bootstrap Grids. The main javascript file script.js contains an event listener for the page load, and the content loaded is determined based on the ID in the body tag of the Categories and Quiz pages.
-
-  <img src="">
+![flow](https://github.com/user-attachments/assets/eec66f2a-8699-4c1b-bb3b-bcf34170e2a5)
 
 ### External Question Bank
 Since there is currently no publicly available API to the Life in the UK test questions, we decided to use a question bank in our project. We implemented this as an additional Javascript file which contains 4 arrays of question Objects, one for each category. These are exported and imported into the main javascript file using ES6 version import/export.
@@ -177,10 +181,14 @@ Since there is currently no publicly available API to the Life in the UK test qu
 
 ## Responsive Design
 Most of the content is responsive to different screen sizes as it was built using components from the Bootstrap Library.
+![amiresponsive](https://github.com/user-attachments/assets/f34ddf3d-39db-4396-8616-2856e72909c0)
 
 ## Future Features
 - Timer: will help user to know how fast he/she is taking to do the test and be able to reflect if needing to be quicker with the quizz or  if can take more time to read and think about the answers. THe official test is timed, so the user needs to have this in account to avoid not having enough time to finish it.
-- Progress Indicator: will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
+- Mixed Questions: on the Categories page, users can choose to have a mix of questions from different categories to simulate the exam conditions.
+- Set Quiz Length: the number of question in each round (quiz length) is currently set as a global variable in script.js. This could be set by the user by clicking on buttons with predetermined quiz lengths of 10, 20, 30, or 40. This allows the user the flexibility to set how many questions they want to answer in each round.
+- Question shuffler 2.0: the shuffler function that picks a question at random could be refined by checking the condition that the question hasn't already been included in the current round.
+- Progress Indicator 2.0: a graphical indicator will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
 
 ## Technologies Used
 ### Languages and Technologies
@@ -222,11 +230,12 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
+![HTML_validation](https://github.com/user-attachments/assets/206cb6f7-b1d9-4a7f-a853-3d492d9157e6)
 
 ### CSS Validation
 
-- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.<br>
-![CSS_validation](https://github.com/user-attachments/assets/39ea1cd2-35b6-44c8-8295-44f62ae4d6b7)
+- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+![CSS_validation](https://github.com/user-attachments/assets/367ad92f-280d-4632-8f4a-f6b14cc4145d)
 
 
 ### Lighthouse Audit
@@ -234,13 +243,15 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ### JSHint Linter
 
 - Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.<br>
-![JSHint](https://github.com/user-attachments/assets/a290be47-4e96-4cf7-8c25-8bb1f16ff463)
+script.js
+![JSHint](https://github.com/user-attachments/assets/3e68e3c4-361e-4754-b6b1-ba234d61937d)<br>
+questionbank.js
+![jshint_questionbank](https://github.com/user-attachments/assets/fd6cad21-3b68-45d5-8238-9e69bba65291)
 
 
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
 - Footer and icons showing well on Chrome browser but not showing the full icons logo on Firefox.
-- Home button had to be taken off, has format/style changing in different pages (eg: categories and results")
 
 [Back to top](#top)
 
