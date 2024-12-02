@@ -225,7 +225,9 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ### JSHint Linter
 
 ### Bugs yet to be Fixed
-- 
+- Some buttons like the "Play Again" button with different shape on the results.
+- Footer and icons showing well on Chrome browser but not showing the full icons logo on Firefox.
+- Home button had to be taken off, has format/style changing in different pages (eg: categories and results")
 
 [Back to top](#top)
 
