@@ -454,7 +454,7 @@ export let quizQuestions = [
         options: {
             a: "76 Charlotte Street",
             b: "1 Devonshire Terrace",
-            c: "The Buckingham palace",
+            c: "The Buckingham Palace",
             d: "10 Downing Street"
         },
         correctAnswer: "d",

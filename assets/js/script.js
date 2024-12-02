@@ -108,20 +108,20 @@ const app = {
 // function to assign quizQuestions array based on chosen category
 function fetchQuestionSet(chosenCategory) {
     let filteredQuestions = quizQuestions.filter(question => question.category === chosenCategory);
-//    return shuffleArray(filteredQuestions).slice(0, quizLength);
-   return filteredQuestions;
+   return shuffleArray(filteredQuestions).slice(0, quizLength);
 }
 
 // function to use Fisher-Yates shuffle to shuffle quizQuestions array
-// function shuffleArray(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-// }
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 // show next button
+
 function showNextButton(){
     let nextButton = document.querySelector('#nextButton i');
     if (nextButton) {
@@ -180,7 +180,6 @@ function updateQuiz(questionSet) {
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
     imageElement.alt = questionSet[qnum].imageAlt;
-    //imageElement.width = "200"; //move width setting to css
     // add answer options to Quiz page
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
