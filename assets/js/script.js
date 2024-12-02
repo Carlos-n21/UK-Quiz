@@ -86,22 +86,20 @@ const app = {
         categoriesElement.innerHTML = "";
         categoriesElement.innerHTML = `<h3>Categories</h3>
         <p>(Choose a category)</p>
-        <div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
-                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">
-                <i class="fa-solid fa-building-columns" style="width: 20px;">History</i></a>
+        <div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot --><a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">
+                <i class="fa-solid fa-building-columns" style="width: 20px;"></i>History</a>
             </div>
-            <div class="col-12 col-md-6 mb-2">
-            <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">
-            <i class="fa-solid fa-globe" style="width: 20px;">Geography</i></a>
+            <div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">
+            <i class="fa-solid fa-globe" style="width: 20px;"></i>Geography</a>
             </div>
         </div>
         <div class="row"><div class="col-12 col-md-6 mb-2">
         <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">
-        <i class="fa-solid fa-scale-balanced" style="width: 20px;">Law and Society</i></a>
+        <i class="fa-solid fa-scale-balanced" style="width: 20px;"></i>Law and Society</a>
             </div>
         <div class="col-12 col-md-6 mb-2">
         <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">
-        <i class="fa-solid fa-masks-theater" style="width: 20px;">Sports and Culture</i></a>
+        <i class="fa-solid fa-masks-theater" style="width: 20px;"></i>Sports and Culture</a>
             </div>
         </div>
     </div>`;
