@@ -80,7 +80,7 @@ export let quizQuestions = [
         },
         correctAnswer: "b",
         category: "history",
-        imageURL: "assets/images/questionbank/history6_blackdeath.png",
+        imageURL: "assets/images/questionbank/history6_blackdeath.jpg",
         imageAlt: "Illustration of the Black Death",
         incorrectFeedback: "One third of the population of England and a similar proportion in Scotland and Wales died because of the Black Death."
     },
