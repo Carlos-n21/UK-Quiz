@@ -184,7 +184,10 @@ Most of the content is responsive to different screen sizes as it was built usin
 
 ## Future Features
 - Timer: will help user to know how fast he/she is taking to do the test and be able to reflect if needing to be quicker with the quizz or  if can take more time to read and think about the answers. THe official test is timed, so the user needs to have this in account to avoid not having enough time to finish it.
-- Progress Indicator: will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
+- Mixed Questions: on the Categories page, users can choose to have a mix of questions from different categories to simulate the exam conditions.
+- Set Quiz Length: the number of question in each round (quiz length) is currently set as a global variable in script.js. This could be set by the user by clicking on buttons with predetermined quiz lengths of 10, 20, 30, or 40. This allows the user the flexibility to set how many questions they want to answer in each round.
+- Question shuffler 2.0: the shuffler function that picks a question at random could be refined by checking the condition that the question hasn't already been included in the current round.
+- Progress Indicator 2.0: a graphical indicator will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
 
 ## Technologies Used
 ### Languages and Technologies
@@ -247,7 +250,6 @@ questionbank.js
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
 - Footer and icons showing well on Chrome browser but not showing the full icons logo on Firefox.
-- Home button had to be taken off, has format/style changing in different pages (eg: categories and results")
 
 [Back to top](#top)
 
