@@ -83,12 +83,16 @@ Here are all the user stories that have been prioritised (all must have and some
 | ----------------------------------------------- |:-------------------------:| -------:|
 | Homepage                                        | must have                 |   Done  |
 | Choose Quiz by Category                         | must have                 |   Done  |
-| Show Quiz Question                              | must have                 |   WIP   |
+| Show Quiz Question                              | must have                 |   Done  |
+| Score Calculation                               | must have                 |   Done  |
+| Responsive Design                               | must have                 |   Done  |
 | Mark Answers and Give Feedback                  | must have                 |   Done  |
 | Show Score and Results                          | must have                 |   Done  |
+| Accessibility Features                          | must have                 |   Done  |
 | Icons, logos and favicon                        | must have                 |   Done  |
 | Rules Modal                                     | should have               |   Done  |
-| Progress Indicator                              | should have               |   WIP   |
+| Progress Indicator                              | should have               |   Done  |
+| Random Question                                 | should have               |   Done  |
 
 All user stories were logged on the [Kanban Project Board](https://github.com/users/Carlos-n21/projects/12/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have.
 
@@ -126,6 +130,7 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 ### Typography
 Initial website font-family was Times New Roman, which was changed to "Arial, open sans" for better reading, showing smoother lines.
 Not imported from Google Fonts, used as suggestion from COpilot whilst coding on style.css
+![Open Sans](https://github.com/user-attachments/assets/bad25f72-0c15-4c23-80be-d9008a87008f)
 
 ### Imagery
 - Background image<br>
@@ -145,11 +150,16 @@ And Rules, which will open the modal explaining hot to play/do the quiz.
 
 This modal shows how to use the site and can be closed by clicking/selecting the "x" on the top-right side of the modal or clicking/selecting any area of the webpage outside the modal area.
 
+### Footer
+  <img src="assets/images/footer.png">
+
+The footer contains 3 GitHUb icons for each of the members of the group, that can be accessed by clicking/selecting each of them. Will open a new page for the GitHub account.
+
 ### Categories Page
   <img src="assets/images/categories-startgame.png">
-  <img src="assets/images/home-button-categories.png">
 
 The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
+If a user needs to go back to the homepage, he/she can select/click on the title to be redirected.
 
 ### Quiz Page
   <img src="assets/images/Question-view-1.png">
@@ -174,7 +184,10 @@ Most of the content is responsive to different screen sizes as it was built usin
 
 ## Future Features
 - Timer: will help user to know how fast he/she is taking to do the test and be able to reflect if needing to be quicker with the quizz or  if can take more time to read and think about the answers. THe official test is timed, so the user needs to have this in account to avoid not having enough time to finish it.
-- Progress Indicator: will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
+- Mixed Questions: on the Categories page, users can choose to have a mix of questions from different categories to simulate the exam conditions.
+- Set Quiz Length: the number of question in each round (quiz length) is currently set as a global variable in script.js. This could be set by the user by clicking on buttons with predetermined quiz lengths of 10, 20, 30, or 40. This allows the user the flexibility to set how many questions they want to answer in each round.
+- Question shuffler 2.0: the shuffler function that picks a question at random could be refined by checking the condition that the question hasn't already been included in the current round.
+- Progress Indicator 2.0: a graphical indicator will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
 
 ## Technologies Used
 ### Languages and Technologies
@@ -218,16 +231,25 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
 
 ### CSS Validation
+
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+![CSS_validation](https://github.com/user-attachments/assets/367ad92f-280d-4632-8f4a-f6b14cc4145d)
+
 
 ### Lighthouse Audit
 
 ### JSHint Linter
 
+- Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.<br>
+script.js
+![JSHint](https://github.com/user-attachments/assets/3e68e3c4-361e-4754-b6b1-ba234d61937d)<br>
+questionbank.js
+![jshint_questionbank](https://github.com/user-attachments/assets/fd6cad21-3b68-45d5-8238-9e69bba65291)
+
+
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
 - Footer and icons showing well on Chrome browser but not showing the full icons logo on Firefox.
-- Home button had to be taken off, has format/style changing in different pages (eg: categories and results")
 
 [Back to top](#top)
 
