@@ -146,15 +146,15 @@ And Rules, which will open the modal explaining hot to play/do the quiz.
 This modal shows how to use the site and can be closed by clicking/selecting the "x" on the top-right side of the modal or clicking/selecting any area of the webpage outside the modal area.
 
 ### Footer
-  <img src="assets/images/homepage-view.png">
+  <img src="assets/images/footer.png">
 
 The footer contains 3 GitHUb icons for each of the members of the group, that can be accessed by clicking/selecting each of them. Will open a new page for the GitHub account.
 
 ### Categories Page
   <img src="assets/images/categories-startgame.png">
-  <img src="assets/images/home-button-categories.png">
 
 The categories menu consists of 4 buttons to each of the 4 categories of quiz questions. A Font Awesome icon has been added to each button to help users identify the categories more easily. By clicking on the category button, users are taken to the Quiz.
+If a user needs to go back to the homepage, he/she can select/click on the title to be redirected.
 
 ### Quiz Page
   <img src="assets/images/Question-view-1.png">
