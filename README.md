@@ -127,6 +127,7 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 ### Typography
 Initial website font-family was Times New Roman, which was changed to "Arial, open sans" for better reading, showing smoother lines.
 Not imported from Google Fonts, used as suggestion from COpilot whilst coding on style.css
+![Open Sans](https://github.com/user-attachments/assets/bad25f72-0c15-4c23-80be-d9008a87008f)
 
 ### Imagery
 - Background image<br>
@@ -220,14 +221,18 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### CSS Validation
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
-![CSS_validation](https://github.com/user-attachments/assets/39ea1cd2-35b6-44c8-8295-44f62ae4d6b7)
+![CSS_validation](https://github.com/user-attachments/assets/367ad92f-280d-4632-8f4a-f6b14cc4145d)
+
 
 
 ### Lighthouse Audit
 
 ### JSHint Linter
-- Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.
-![JSHint](https://github.com/user-attachments/assets/8bba78ec-5d06-4b3f-9e26-092da0d0de29)
+- Used [JS Hint](https://jshint.com/)) to test Javascript for ES version 6 and got no warnings.<br>
+script.js
+![JSHint](https://github.com/user-attachments/assets/3e68e3c4-361e-4754-b6b1-ba234d61937d)<br>
+questionbank.js
+![jshint_questionbank](https://github.com/user-attachments/assets/fd6cad21-3b68-45d5-8238-9e69bba65291)
 
 ### Bugs yet to be Fixed
 - Some buttons like the "Play Again" button with different shape on the results.
