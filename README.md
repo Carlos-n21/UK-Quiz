@@ -111,8 +111,6 @@ Initial layout of website:
 
 [Back to top](#top)
 
-[Back to top](#top)
-
 ## Design
 ### Colour Scheme
 We took inspiration from the Union Jack and websites associated with the British identity, such as [official site for the Royal Family](https://www.royal.uk/). We also used prompts in Co-pilot and ChatGPT which recommended the following colours:
@@ -126,6 +124,8 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
   <img src="assets/images/color-contrast-wrong-answer.png"> <img src="assets/images/green-color-contrast-rightanswer.png">
 
 ### Typography
+Initial website font-family was Times New Roman, which was changed to "Arial, open sans" for better reading, showing smoother lines.
+Not imported from Google Fonts, used as suggestion from COpilot whilst coding on style.css
 
 ### Imagery
 - Background image<br>
@@ -172,13 +172,9 @@ Since there is currently no publicly available API to the Life in the UK test qu
 ## Responsive Design
 Most of the content is responsive to different screen sizes as it was built using components from the Bootstrap Library.
 
-[Back to top](#top)
-
 ## Future Features
-Timer
-Progress Indicator
-
-[Back to top](#top)
+- Timer: will help user to know how fast he/she is taking to do the test and be able to reflect if needing to be quicker with the quizz or  if can take more time to read and think about the answers. THe official test is timed, so the user needs to have this in account to avoid not having enough time to finish it.
+- Progress Indicator: will help the user to monitor his progress from the initial attempts to a level where the user remembers/recalls the information about different categories or questions faster and able to take less time to do the quiz, getting the knowledge more consolidated and therefore, being better prepared to do the oficial quiz.
 
 ## Technologies Used
 ### Languages and Technologies
