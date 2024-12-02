@@ -153,7 +153,7 @@ function nextQuestion(){
 }
 
 function updateQuiz(questionSet) {
-    console.log(questionSet);
+    // check if questionSet is empty or undefined
     if (!questionSet || questionSet.length === 0) {
         console.error("updateQuiz: questionSet is empty or undefined");
         return;
@@ -180,7 +180,7 @@ function updateQuiz(questionSet) {
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
     imageElement.alt = questionSet[qnum].imageAlt;
-    imageElement.width = "200"; //move width setting to css
+    //imageElement.width = "200"; //move width setting to css
     // add answer options to Quiz page
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
@@ -277,16 +277,11 @@ function showResults(){
         "<strong>You are a UK Citizen Extraordinaire!</strong> You know your fish and chips from your chicken tikka, keep practising! Your commitment are truly commendable. Welcome to the UK family!", 
         "<strong>You are a Proud Brit!</strong> Don't worry! It's hard work studying for this exam, but keep going and your hard work and dedication will pay off. Welcome to this wonderful country!"
     ];
-    const animgifURLs = [
-        "https://giphy.com/embed/1yjZXySg7tSohpcmUM", 
-        "https://giphy.com/embed/3owypnv1Med6YoCbcs", 
-        "https://giphy.com/embed/3oEjI1TncWUr0Xth96"
-    ];
-
+    
     const gifURLs = [
-        "https://giphy.com/gifs/queen-we-are-the-champions-1yjZXySg7tSohpcmUM", 
-        "https://giphy.com/gifs/nike-mo-unlimited-justdoit-3owypnv1Med6YoCbcs", 
-        "https://giphy.com/gifs/pbs-great-british-baking-show-bake-off-gbbo-3oEjI1TncWUr0Xth96"
+        "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGR0bmd2N2xqbWdtNzNna2tmNmpuZHVpcWFyZ3plOXA2cW00cmpjeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1yjZXySg7tSohpcmUM/giphy.webp", 
+        "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm50NnJxZTMydHZ3djIxNWNlcjduYzN5NTV6bHR0bzRzZTVwajRlZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3owypnv1Med6YoCbcs/giphy.webp", 
+        "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWdrcm9zZG5zdTR0MG4yeXo2bjMxNmkwcHozdmF5M20xOTRvcnMzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEjI1TncWUr0Xth96/giphy.webp"
     ];
     const gifAlts = [
         "We are the champions by Queen", 
@@ -294,22 +289,18 @@ function showResults(){
         "Great British Bake Off Mary Berry saying, 'Soggy Bottom'"
     ];
     let comment = "";
-    let animgifURL = "";
     let gifURL = "";
     let gifAlt = "";
     if (score >= 80) {
         comment = comments[0];
-        animgifURL = animgifURLs[0];
         gifURL = gifURLs[0];
         gifAlt = gifAlts[0];
     } else if (score >= 50) {
         comment = comments[1];
-        animgifURL = animgifURLs[1];
         gifURL = gifURLs[1];
         gifAlt = gifAlts[1];
     } else {
         comment = comments[2];
-        animgifURL = animgifURLs[2];
         gifURL = gifURLs[2];
         gifAlt = gifAlts[2];
     }
@@ -320,7 +311,7 @@ function showResults(){
             <p class="lead">Correct: ${correctNum}; incorrect: ${incorrectNum}. Your score is ${score}%.</p>
             <p class="lead results-text">${comment}</p>
         </div>
-        <div class="col-12 col-md-6"><div class="giphy-embed" style="position:relative; padding-bottom:56%;"><iframe src="${animgifURL}" width="90%" height="90%" style="position:absolute; left:1rem;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><h6><a href="${gifURL}" alt="${gifAlt}" target="_blank">via GIPHY</a></h6></div></div>    
+        <div id="feedbackImage" class="col-12 col-md-6"><img src="${gifURL}" alt="${gifAlt}" class="img-fluid"></div>    
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 mb-2 mt-auto">
                 <a href="categories.html" class="btn btn-outline-secondary btn-block">Play Again</a>

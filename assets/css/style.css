@@ -173,6 +173,13 @@ i{
     text-align: center;
 }
 
+#feedbackImage {
+    width: 100px;
+    height: auto;
+    margin: 20px 0;
+}
+
+
 #questionCounter {
     font-size: 1.5rem;
     margin-top: 1rem;

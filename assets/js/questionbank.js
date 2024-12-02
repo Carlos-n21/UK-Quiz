@@ -366,20 +366,6 @@ export let quizQuestions = [
         incorrectFeedback: "The Monarch has important ceremonial roles, such as the opening of the new parliamentary session each year."
     },
     {
-        question: "What is the money limit for the small claims procedure in England and Wales?",
-        options: {
-            a: "£4,000",
-            b: "£6,000",
-            c: "£5,000",
-            d: "£10,000"
-        },
-        correctAnswer: "d",
-        category: "law",
-        imageURL: "assets/images/questionbank/law6_unionJack.jpg",
-        imageAlt: "The Union Jack",
-        incorrectFeedback: "The small claims procedure is used for claims of less than £10,000 in England and Wales."
-    },
-    {
         question: "How often are the General Elections held?",
         options: {
             a: "Every year",
