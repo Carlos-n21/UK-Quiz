@@ -145,6 +145,11 @@ And Rules, which will open the modal explaining hot to play/do the quiz.
 
 This modal shows how to use the site and can be closed by clicking/selecting the "x" on the top-right side of the modal or clicking/selecting any area of the webpage outside the modal area.
 
+### Footer
+  <img src="assets/images/homepage-view.png">
+
+The footer contains 3 GitHUb icons for each of the members of the group, that can be accessed by clicking/selecting each of them. Will open a new page for the GitHub account.
+
 ### Categories Page
   <img src="assets/images/categories-startgame.png">
   <img src="assets/images/home-button-categories.png">
