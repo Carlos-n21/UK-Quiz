@@ -231,7 +231,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ## Credits
 ### Code References
-Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.<br>
+Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
 <br>
 Other resources used as reference for the implementation:<br>
 [How to add Icons to Buttons in Bootstrap 5 ?](https://www.geeksforgeeks.org/how-to-add-icons-to-buttons-in-bootstrap-5/)<br>
@@ -240,6 +240,17 @@ Other resources used as reference for the implementation:<br>
 ### Use of AI
 #### Code Generation
 The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to e.g. variables that have not been declared or filepaths that do not exist. Copilot was also able to suggest higher-level implementation ideas when asked for ways to pass data between pages, and suggested reading on the use of local storage.
+
+Also used to generate some of the quiz questions and feedback content, which the team then reviewed and edited before including into the site.
+Copilot was used to help coding HTML, CSS style and JavaScript code as can be seen with the prompts below:
+
+- "Can you help me update the current code, so that the page shows this image: assets/images/london-eye-wide-2.jpg, on the background? Also can you help create a container on the middle of the page with a text box with the text "Life in the UK" close to the top of the container and two buttons "Play" after the text and "Rules" below the previous button?"
+
+- "Can you help change the image style of ".container h1" background to a fadding style that highlights the title?"
+
+- "can you help update the code so that the image is small and shows between the p element and the "Play Again" button?"
+
+- "Can you update the code to show categories buttons on top of each other on a mobile screen with space between them? And 2 on top and 2 above them with space between them? Categories buttons need to be light-blue with black text, all with same dimensions, please."
 
 #### Debugging
 Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages, Chrome DevTools AI Assistance panel was also used to explain the errors raised in the Console.
@@ -251,16 +262,7 @@ When coding more complicated logical constructs, e.g. a complex iteration to loo
 On the whole, it has been useful to pair programme with Copilot and use it for debugging and testing as we code. Due to the tight timescale of the hackathon, the team tried to use AI wherever possible to reduce development time, from creating user stories to suggesting commit messages. It was also able to explain selected code written by other team members with a concise and accurate summary. Occassionally it can be annoying when Copilot suggests code in ghost text unnecessarily, or introduces additional closing tags or brackets unnecessarily. Nonetheless, when used with specific prompts and context, some of the results provided by Copilot have been mostly usable, thus speeding up development. 
 
 ### Content References
-MS Copilot was used to generate some of the quiz questions and feedback content, which the team then reviewed and edited before including into the site.
-Copilot was used to help coding HTML, CSS style and JavaScript code as can be seen with the prompts below:
 
-- "Can you help me update the current code, so that the page shows this image: assets/images/london-eye-wide-2.jpg, on the background? Also can you help create a container on the middle of the page with a text box with the text "Life in the UK" close to the top of the container and two buttons "Play" after the text and "Rules" below the previous button?"
-
-- "Can you help change the image style of ".container h1" background to a fadding style that highlights the title?"
-
-- "can you help update the code so that the image is small and shows between the p element and the "Play Again" button?"
-
-- "Can you update the code to show categories buttons on top of each other on a mobile screen with space between them? And 2 on top and 2 above them with space between them? Categories buttons need to be light-blue with black text, all with same dimensions, please."
 
 ### Media References
 [Pexels.com](https://www.pexels.com/) for some of the images used in the quiz questions<br>
@@ -268,6 +270,7 @@ Microsoft Copilot was used to generate some of the illustrations for the quiz qu
 The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker). The logo and the photos have been edited and optimised using [Squoosh](https://squoosh.app/) or other similar applications.<br>
 Background image TBC
 [GIPHY](https://giphy.com/) for the animated gifs on the results page
+Background image: https://pixabay.com/photos/london-eye-london-city-england-351203/
 
 ### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
