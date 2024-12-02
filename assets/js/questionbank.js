@@ -454,7 +454,7 @@ export let quizQuestions = [
         options: {
             a: "76 Charlotte Street",
             b: "1 Devonshire Terrace",
-            c: "The Buckingham palace",
+            c: "The Buckingham Palace",
             d: "10 Downing Street"
         },
         correctAnswer: "d",
@@ -471,7 +471,7 @@ export let quizQuestions = [
             c: "Sake Dean Mahomet",
             d: "James Cook"
         },
-        correctAnswer: "a",
+        correctAnswer: "d",
         category: "culture",
         imageURL: "assets/images/questionbank/culture4_australia.jpg",
         imageAlt: "Map of Australia",

@@ -84,11 +84,24 @@ const app = {
     buildCategories: () => {
         let categoriesElement = document.querySelector("#buttonArea");
         categoriesElement.innerHTML = "";
-        categoriesElement.innerHTML = `<h3>Categories</h3><p>(Choose a category)</p><div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
-                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns" style="width: 20px;"></i>History</a>
-            </div><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe" style="width: 20px;"></i>Geography</a>
-            </div></div><div class="row"><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced" style="width: 20px;"></i>Law and Society</a>
-            </div><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture"><i class="fa-solid fa-masks-theater" style="width: 20px;"></i>Sports and Culture</a>
+        categoriesElement.innerHTML = `<h3>Categories</h3>
+        <p>(Choose a category)</p>
+        <div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
+                <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history">
+                <i class="fa-solid fa-building-columns" style="width: 20px;">History</i></a>
+            </div>
+            <div class="col-12 col-md-6 mb-2">
+            <a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography">
+            <i class="fa-solid fa-globe" style="width: 20px;">Geography</i></a>
+            </div>
+        </div>
+        <div class="row"><div class="col-12 col-md-6 mb-2">
+        <a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law">
+        <i class="fa-solid fa-scale-balanced" style="width: 20px;">Law and Society</i></a>
+            </div>
+        <div class="col-12 col-md-6 mb-2">
+        <a href="quiz.html" id="cultureButton" class="btn btn-light-blue btn-block categoryBtn" data-value="culture">
+        <i class="fa-solid fa-masks-theater" style="width: 20px;">Sports and Culture</i></a>
             </div>
         </div>
     </div>`;
@@ -108,20 +121,20 @@ const app = {
 // function to assign quizQuestions array based on chosen category
 function fetchQuestionSet(chosenCategory) {
     let filteredQuestions = quizQuestions.filter(question => question.category === chosenCategory);
-//    return shuffleArray(filteredQuestions).slice(0, quizLength);
-   return filteredQuestions;
+   return shuffleArray(filteredQuestions).slice(0, quizLength);
 }
 
 // function to use Fisher-Yates shuffle to shuffle quizQuestions array
-// function shuffleArray(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-// }
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 // show next button
+
 function showNextButton(){
     let nextButton = document.querySelector('#nextButton i');
     if (nextButton) {
@@ -180,7 +193,6 @@ function updateQuiz(questionSet) {
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
     imageElement.alt = questionSet[qnum].imageAlt;
-    //imageElement.width = "200"; //move width setting to css
     // add answer options to Quiz page
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
@@ -314,13 +326,13 @@ function showResults(){
         <div id="feedbackImage" class="col-12 col-md-6"><img src="${gifURL}" alt="${gifAlt}" class="img-fluid"></div>    
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="categories.html" class="btn btn-outline-secondary btn-block">Play Again</a>
+                <a href="categories.html" class="btn btn-outline-secondary btn-block feedbackBtn">Play Again</a>
             </div>
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="index.html" class="btn btn-outline-secondary btn-block">Home</a>
+                <a href="index.html" class="btn btn-outline-secondary btn-block feedbackBtn">Home</a>
             </div>
             <div class="col-12 col-md-4 mb-2 mt-auto">
-                <a href="categories.html" class="btn btn-outline-secondary btn-block">Categories</a>
+                <a href="categories.html" class="btn btn-outline-secondary btn-block feedbackBtn">Categories</a>
             </div>
         </div>
     </div>
