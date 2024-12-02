@@ -40,7 +40,7 @@ body {
 
 /* custom style for index.html container */
 .custom-container {
-    max-width: 70vw; /* Adjusted max-width to 70vw */
+    max-width: 66vw; /* Adjusted max-width to 70vw */
     margin: 0 auto; /* Center the container */
 }
 
@@ -205,7 +205,7 @@ as not starting straight from bottom of the page */
     text-align: center;
     width: 100%;
     opacity: 0.8;
-    height: 4vh;
+    height: 6vh;
 }
 
 .footer a {
