@@ -230,6 +230,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed.
+![HTML_validation](https://github.com/user-attachments/assets/206cb6f7-b1d9-4a7f-a853-3d492d9157e6)
 
 ### CSS Validation
 
