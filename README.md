@@ -172,8 +172,7 @@ At the end of the round, which is currently set to 10 questions, users are given
 
 ### Single Javascript Makes Multiple Pages
 These three UI were initially built in HTML using CSS and Bootstrap Grids. The main javascript file script.js contains an event listener for the page load, and the content loaded is determined based on the ID in the body tag of the Categories and Quiz pages.
-
-  <img src="">
+![flow](https://github.com/user-attachments/assets/eec66f2a-8699-4c1b-bb3b-bcf34170e2a5)
 
 ### External Question Bank
 Since there is currently no publicly available API to the Life in the UK test questions, we decided to use a question bank in our project. We implemented this as an additional Javascript file which contains 4 arrays of question Objects, one for each category. These are exported and imported into the main javascript file using ES6 version import/export.
