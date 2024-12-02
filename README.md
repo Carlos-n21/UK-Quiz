@@ -130,7 +130,8 @@ Based on these suggestions and using [Colorspace Color Palette Generator](https:
 ### Typography
 Initial website font-family was Times New Roman, which was changed to "Arial, open sans" for better reading, showing smoother lines.
 Not imported from Google Fonts, used as suggestion from COpilot whilst coding on style.css
-![Open Sans](https://github.com/user-attachments/assets/bad25f72-0c15-4c23-80be-d9008a87008f)
+![Open Sans](https://github.com/user-attachments/assets/62d85219-c118-44df-87bd-6e5edc208a29)
+
 
 ### Imagery
 - Background image<br>
@@ -181,6 +182,7 @@ Since there is currently no publicly available API to the Life in the UK test qu
 
 ## Responsive Design
 Most of the content is responsive to different screen sizes as it was built using components from the Bootstrap Library.
+![amiresponsive](https://github.com/user-attachments/assets/f34ddf3d-39db-4396-8616-2856e72909c0)
 
 ## Future Features
 - Timer: will help user to know how fast he/she is taking to do the test and be able to reflect if needing to be quicker with the quizz or  if can take more time to read and think about the answers. THe official test is timed, so the user needs to have this in account to avoid not having enough time to finish it.
