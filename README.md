@@ -294,7 +294,7 @@ On the whole, it has been useful to pair programme with Copilot and use it for d
 [Pexels.com](https://www.pexels.com/) for some of the images used in the quiz questions<br>
 Microsoft Copilot was used to generate some of the illustrations for the quiz questions<br>
 The UK Quiz logo was generated using [Logo.ai](https://www.logoai.com/logo-maker). The logo and the photos have been edited and optimised using [Squoosh](https://squoosh.app/) or other similar applications.<br>
-Background image [London Eye]([https://giphy.com/](https://pixabay.com/photos/london-eye-london-city-england-351203/) from Google search.
+Background image [London Eye](https://pixabay.com/photos/london-eye-london-city-england-351203/) searched on Google, with the intent to have an image that could fill most of the screens without having to add more images.
 
 ### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
