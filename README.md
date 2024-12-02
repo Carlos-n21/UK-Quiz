@@ -239,6 +239,12 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 
 ### Lighthouse Audit
+- Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. Testing was done as soon as we deployed at the end of Day 2, allowing more time for bug fixes.<br>
+The Home and Categories pages scored well as they are fairly small in filesize and contain less code:
+![lighthouse_home_mobile](https://github.com/user-attachments/assets/4f846639-51ad-42d9-aefc-46f2c09d5e4f)
+
+The quiz page varied in score. Some of this is due to the response time of the javascript, and some of the images have been optimised by reduding the image size and saving to webp format in order to raise the score:
+![lighthouse_quiz_mobile](https://github.com/user-attachments/assets/aea6ab9c-c521-4a15-b468-355f2e429444)
 
 ### JSHint Linter
 
