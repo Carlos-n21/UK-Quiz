@@ -234,7 +234,7 @@ export let quizQuestions = [
         },
         correctAnswer: "a",
         category: "geography",
-        imageURL: "assets/images/questionbank/geography7_nationalPark.png",
+        imageURL: "assets/images/questionbank/geography7_nationalPark.webp",
         imageAlt: "Illustration of a national park",
         incorrectFeedback: "The Lake District is England's largest national park."
     },
@@ -385,7 +385,7 @@ export let quizQuestions = [
             a: "The Prime Minister",
             b: "The Pope",
             c: "The Monarch",
-            d: "The Monarch"
+            d: "The Duke of Edinburgh"
         },
         correctAnswer: "c",
         category: "law",
@@ -403,7 +403,7 @@ export let quizQuestions = [
         },
         correctAnswer: "c",
         category: "law",
-        imageURL: "assets/images/questionbank/law8_church.jpg",
+        imageURL: "assets/images/questionbank/law9_court.jpg",
         imageAlt: "Law court",
         incorrectFeedback: "More serious civil cases - for example, when a large amount of compensation is being claimed – are dealt with in the High Court in England, Wales and Northern Ireland."
     },
@@ -457,7 +457,7 @@ export let quizQuestions = [
             c: "The Buckingham palace",
             d: "10 Downing Street"
         },
-        correctAnswer: "a",
+        correctAnswer: "d",
         category: "culture",
         imageURL: "assets/images/questionbank/culture3_residence.jpg",
         imageAlt: "Prime Minister's residence",
