@@ -1,4 +1,4 @@
-import { historyQuizQuestions, geographyQuizQuestions, lawQuizQuestions, cultureQuizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
+import { quizQuestions } from './questionbank.js'; // import quizQuestions array from questionbank.js
 // set qnum to access index in quizQuestions array
 let qnum = 0;
 // set correctNum as number of questions answered correctly
@@ -17,22 +17,21 @@ let totalAnswered = 0;
 let chosenCategory = localStorage.getItem('chosenCategory') || '';
 // set quizQuestions array to one of the quizQuestions arrays
 let questionSet = [];
-let quizQuestions = []; // default to geographyQuizQuestions
+// let quizQuestions = []; // default to geographyQuizQuestions
 let answer = "";
 
-  // page load event listener
- const app = {
+// page load event listener
+const app = {
     init: () => {
         document.addEventListener('DOMContentLoaded', app.load);
-        console.log("init");
     },
     load: () => {
         app.getContent();
-        console.log("loaded");
         chosenCategory = localStorage.getItem('chosenCategory');
+        feedbackElement = document.getElementById('feedback');
     },
     // getContent decides which content to display by body#id
-    getContent: () =>{
+    getContent: () => {
         let bodyId = document.body.id;
         switch (bodyId) {
             case 'categories':
@@ -40,7 +39,6 @@ let answer = "";
                 break;
             case 'quiz':
                 app.displayQuizContent();
-                updateQuiz(questionSet);
                 break;
             default:
                 console.log("not caught" + bodyId);
@@ -48,14 +46,12 @@ let answer = "";
         }
     },
     // displayQuizContent function to display content for categories page
-    displayCategoriesContent:() =>{
-        console.log("getContent: bodyId "+document.body.id);
+    displayCategoriesContent: () => {
         app.buildCategories();
-            // add event listener for category buttons
+        // add event listener for category buttons
         const categoryButtons = document.querySelectorAll('.categoryBtn');
-        for (let button of categoryButtons) {
-            button.addEventListener('click', function(e){
-                console.log("EL target id"+e.currentTarget.id);
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
                 let clickedCategory = e.currentTarget.id;
                 // set quizQuestions array to one of the quizQuestions arrays
                 if (clickedCategory === "historyButton") {
@@ -67,32 +63,28 @@ let answer = "";
                 } else if (clickedCategory === "cultureButton") {
                     chosenCategory = "culture";
                 }
-              // set chosenCategory in localStorage
+                // set chosenCategory in localStorage
                 localStorage.setItem('chosenCategory', chosenCategory);
-                console.log("Stored category: "+chosenCategory);
-        //    // reset qnum, correctNum, incorrectNum, score, totalAnswered
-           qnum = 0;
-           correctNum = 0;
-           incorrectNum = 0;
-           score = 0;
-           totalAnswered = 0;
-           // set quizLength to number of questions per round
-           quizLength = 10;
-       });
-    }
+                // reset qnum, correctNum, incorrectNum, score, totalAnswered
+                qnum = 0;
+                correctNum = 0;
+                incorrectNum = 0;
+                score = 0;
+                totalAnswered = 0;
+                // set quizLength to number of questions per round
+                quizLength = 10;
+            });
+        });
     },
     // displayQuizContent function to display content for categories page
-    displayQuizContent:() => {
-        console.log("getContent: bodyId "+document.body.id);
-        console.log("start displayQuizContent: chosenCat: " +chosenCategory);
-        
+    displayQuizContent: () => {
         app.buildQuiz();
     },
     // build categories page
-    buildCategories:() => {
-    let categoriesElement = document.querySelector("#buttonArea");
-    categoriesElement.innerHTML = "";    
-    categoriesElement.innerHTML = `<h3>Categories</h3><p>(Choose a category)</p><div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
+    buildCategories: () => {
+        let categoriesElement = document.querySelector("#buttonArea");
+        categoriesElement.innerHTML = "";
+        categoriesElement.innerHTML = `<h3>Categories</h3><p>(Choose a category)</p><div class="row"><div class="col-12 col-md-6 mb-2"><!-- Bootstrap grid system used to create two columns, used Copilot -->
                 <a href="quiz.html" id="historyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="history"><i class="fa-solid fa-building-columns" style="width: 20px;"></i>History</a>
             </div><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="geographyButton" class="btn btn-light-blue btn-block categoryBtn" data-value="geography"><i class="fa-solid fa-globe" style="width: 20px;"></i>Geography</a>
             </div></div><div class="row"><div class="col-12 col-md-6 mb-2"><a href="quiz.html" id="lawButton" class="btn btn-light-blue btn-block categoryBtn" data-value="law"><i class="fa-solid fa-scale-balanced" style="width: 20px;"></i>Law and Society</a>
@@ -100,35 +92,33 @@ let answer = "";
             </div>
         </div>
     </div>`;
-   },
+    },
 
     // build the quiz page for a specific question in the quizQuestions array
-    buildQuiz:()=> {
-        console.log("first build chosenCat: " +chosenCategory);
+    buildQuiz: () => {
         if (chosenCategory) {
-            fetchQuestionSet(chosenCategory);
-        }updateQuiz(questionSet);
+            questionSet = fetchQuestionSet(chosenCategory);
+        }
+        updateQuiz(questionSet);
         // event listener for nextQuestionButton
-    document.getElementById('nextButton').addEventListener("click",nextQuestion);
+        document.getElementById('nextButton').addEventListener("click", nextQuestion);
     }
-    
-    
 };
+
 // function to assign quizQuestions array based on chosen category
 function fetchQuestionSet(chosenCategory) {
-    if (chosenCategory === "history") {
-        questionSet = historyQuizQuestions.slice(0, quizLength);
-    } else if (chosenCategory === "geography") {
-        questionSet = geographyQuizQuestions.slice(0, quizLength);
-    } else if (chosenCategory === "law") {
-        questionSet = lawQuizQuestions.slice(0, quizLength);
-    } else if (chosenCategory === "culture") {
-        questionSet = cultureQuizQuestions.slice(0, quizLength);
-    }
-    console.log("fetchQuestionSet: assigned questions " + questionSet.length);
-    return questionSet;
+    let filteredQuestions = quizQuestions.filter(question => question.category === chosenCategory);
+    return shuffleArray(filteredQuestions).slice(0, quizLength);
 }
 
+// function to use Fisher-Yates shuffle to shuffle quizQuestions array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 // show next button
 function showNextButton(){
@@ -146,7 +136,7 @@ function hideNextButton(){
     if (nextButton) {
         nextButton.style.display = "none";
     } else {
-        console.error("showNextButton: nextButton element not found");
+        console.error("hideNextButton: nextButton element not found");
     }
 }
 
@@ -154,7 +144,7 @@ function hideNextButton(){
 function nextQuestion(){
     if (totalAnswered < quizLength) {
         qnum++;
-       updateQuiz(questionSet);
+        updateQuiz(questionSet);
         feedbackElement.innerText = "";
     } else {
         showResults();
@@ -171,15 +161,20 @@ function updateQuiz(questionSet) {
         console.error("updateQuiz: qnum is out of bounds");
         return;
     }
-    console.log("start updateQuiz: assigned questions " + questionSet[qnum].question);
     // add question number (= qnum index+1) to Quiz page
     let questionCounterElement = document.querySelector('#questionCounter');
     let questionNumber = parseInt(qnum + 1);
     questionCounterElement.innerHTML = `<span>Question <span class="questionNum">${questionNumber}</span> of <span id="quizLength">${quizLength}</span></span>`;
+    // add question number (= qnum index+1) to Quiz page
+    let questionCountElement = document.querySelector('.questionNum');
+    questionCountElement.innerText = `${questionNumber}`;
     hideNextButton();
     // add question text to Quiz page
     let questionTextElement = document.getElementById('questionText');
     questionTextElement.innerText = questionSet[qnum].question;
+    // hides feedback on Quiz page
+    let feedbackElement = document.getElementById('feedback');
+    feedbackElement.style.display = "none";
     // add question image and alt tag to Quiz page
     let imageElement = document.getElementById('questionImage');
     imageElement.src = questionSet[qnum].imageURL;
@@ -189,22 +184,16 @@ function updateQuiz(questionSet) {
     let options = questionSet[qnum].options;
     let optionsArray = Object.keys(options);
     let optionSetDiv = document.getElementById('optionSet');
-    console.log("options: "+options);
-    let optionSet = '<div class="row mx-auto">';
-    optionSet += '<div class="col-12 col-md-6 mb-2">';
-    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[0]}'>${optionsArray[0]}) ${options[optionsArray[0]]}</button>`;
-    optionSet += "</div>";
-    optionSet += '<div class="col-12 col-md-6 mb-2">';
-    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[1]}'>${optionsArray[1]}) ${options[optionsArray[1]]}</button>`;
-    optionSet += "</div>";
-    optionSet += '<div class="col-12 col-md-6 mb-2">';
-    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[2]}'>${optionsArray[2]}) ${options[optionsArray[2]]}</button>`;
-    optionSet += "</div>";
-    optionSet += '<div class="col-12 col-md-6 mb-2">';
-    optionSet += `<button type='button' class='btn btn-secondary optionButton m-2' data-value='${optionsArray[3]}'>${optionsArray[3]}) ${options[optionsArray[3]]}</button>`;    
-    optionSet += "</div>";
-    optionSet += "</div>";
-    optionSetDiv.innerHTML = optionSet;
+    let optionSet = optionsArray.map((option) => {
+        return `
+            <div class="col-12 col-md-6 mb-2">
+                <button type='button' class='btn btn-secondary optionButton m-2' data-value='${option}'>
+                    ${option}) ${options[option]}
+                </button>
+            </div>
+        `;
+    }).join('');
+    optionSetDiv.innerHTML = `<div class="row mx-auto">${optionSet}</div>`;
     // add event listener to option buttons
     let optionButtons = document.querySelectorAll('.optionButton');
     for (let button of optionButtons) {
@@ -230,16 +219,10 @@ function clearAnswer(){
     feedbackElement.innerText = "";
 }
 
-    // calculate score
-    function calculateScore(){
-        score = Math.round((correctNum / totalAnswered) * 100);
-    }
-  
-
-
-
-
-
+// calculate score
+function calculateScore(){
+    score = Math.round((correctNum / totalAnswered) * 100);
+}
 
 // submit answer
 function submitAnswer(e){
@@ -256,7 +239,7 @@ function submitAnswer(e){
             answerElement.classList.add('btn-success');
             answerElement.classList.remove('btn-secondary');
             correctNum++;
-            console.log("correct:"+correctNum+" totalAnswered:"+totalAnswered);
+            
             // display feedback for correct answer
             feedbackElement.innerText = "Correct! Well done!";
         } else {
@@ -264,7 +247,7 @@ function submitAnswer(e){
             answerElement.classList.add('btn-danger');
             answerElement.classList.remove('btn-secondary');
             incorrectNum++;
-            console.log("correct:"+correctNum+" incorrect:"+incorrectNum+" totalAnswered:"+totalAnswered);
+            
             // display feedback for incorrect answer
             feedbackElement.innerText = questionSet[qnum].incorrectFeedback;
         }
@@ -272,15 +255,17 @@ function submitAnswer(e){
         // handle case where no answer is selected
         feedbackElement.innerText = "Please select an answer";
     }
+    // display feedback
+    feedbackElement.style.display = "block";
+    // disable option buttons
     document.querySelectorAll('.optionButton').forEach(button => {
         button.disabled = true;
     });
     
     showNextButton();
-    
 }
 
-// // builds the results page
+// builds the results page
 function showResults(){
     let resultsElement = document.getElementById('questionArea');
     // calculate score
@@ -302,7 +287,7 @@ function showResults(){
         "https://giphy.com/gifs/nike-mo-unlimited-justdoit-3owypnv1Med6YoCbcs", 
         "https://giphy.com/gifs/pbs-great-british-baking-show-bake-off-gbbo-3oEjI1TncWUr0Xth96"
     ];
-        const gifAlts = [
+    const gifAlts = [
         "We are the champions by Queen", 
         "Mo Farah running non-stop", 
         "Great British Bake Off Mary Berry saying, 'Soggy Bottom'"

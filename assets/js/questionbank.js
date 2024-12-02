@@ -1,5 +1,5 @@
 // export quizQuestions array of objects
-export const historyQuizQuestions = [
+export let quizQuestions = [
     {
         question: "What did the 'Bill of Rights' confirm?",
         options: {
@@ -139,10 +139,8 @@ export const historyQuizQuestions = [
         imageURL: "assets/images/questionbank/history10_farmer.jpg",
         imageAlt: "First farmers building",
         incorrectFeedback: "The first farmers built houses, tombs and monuments on the land."
-    }
-];
-  
-export const geographyQuizQuestions = [{
+    },
+{
         question: "Where in Scotland is known as the home of golf?",
         options: {
             a: "Glasgow",
@@ -281,9 +279,7 @@ export const geographyQuizQuestions = [{
         imageURL: "assets/images/questionbank/geography10_swansea.jpg",
         imageAlt: "Swansea",
         incorrectFeedback: "Swansea is located in Wales."
-    }
-];
-export const lawQuizQuestions = [
+    },
     {
         question: "What is the UK currency?",
         options: {
@@ -438,11 +434,7 @@ export const lawQuizQuestions = [
         imageURL: "assets/images/questionbank/law10_children.png",
         imageAlt: "Children at a playground",
         incorrectFeedback: "The National Society for the Prevention of Cruelty to Children (NSPCC) works with children."
-    }
-];
-export const cultureQuizQuestions = [
-
-
+    },
     {
         question: "Who was Henry Purcell?",
         options: {
